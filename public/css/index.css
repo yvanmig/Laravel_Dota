@@ -36,18 +36,18 @@ body {
 }
 
 .containerSlide {
-  -webkit-animation: slide 1.2s ease-in-out;
-          animation: slide 1.2s ease-in-out;
+  -webkit-animation: slide 1.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+          animation: slide 1.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
 @-webkit-keyframes slide {
   49% {
-    transform: translateX(50%);
+    transform: translateX(40%);
     opacity: 0;
   }
 
   50% {
-    transform: translateX(-50%);
+    transform: translateX(-40%);
     opacity: 0;
   }
 
@@ -59,12 +59,12 @@ body {
 
 @keyframes slide {
   49% {
-    transform: translateX(50%);
+    transform: translateX(40%);
     opacity: 0;
   }
 
   50% {
-    transform: translateX(-50%);
+    transform: translateX(-40%);
     opacity: 0;
   }
 
