@@ -29,7 +29,6 @@ body {
 .containerAppear {
   -webkit-filter: blur(0.6rem);
           filter: blur(0.6rem);
-  background-color: rgba(35, 51, 75, 0.8);
 }
 
 #wrapHero {

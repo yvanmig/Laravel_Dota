@@ -41,8 +41,8 @@
             </div>
             <div class="containerWinStats">
                 <div id="containerHealth">
-                    <div class="blocHealth">santé</div>
-                    <div class="blocHealth">mana</div>
+                    <div id="blocHealth">santé</div>
+                    <div id="blocMana">mana</div>
                 </div>
                 <p class="charRoles"></p>
                 <div id="containerLogoStat">
