@@ -1,5 +1,6 @@
 body {
   background-color: #36465D;
+  overflow-x: hidden;
 }
 
 #gifLoading {
@@ -22,13 +23,55 @@ body {
   background-color: rgba(35, 51, 75, 0.8);
   color: #c9c9c9;
   border-radius: 15px;
-  transition: all 0.3s ease-in-out;
+  transition: -webkit-filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+  transition: all 1s ease-out;
   position: relative;
 }
 
 .containerAppear {
   -webkit-filter: blur(0.6rem);
           filter: blur(0.6rem);
+}
+
+.containerSlide {
+  -webkit-animation: slide 1.2s ease-in-out;
+          animation: slide 1.2s ease-in-out;
+}
+
+@-webkit-keyframes slide {
+  49% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  49% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
 }
 
 #wrapHero {

@@ -61,7 +61,7 @@
                 </div>
             </div>
             <div id="blocWin">
-                    <p> <span class="winRate">Taux de victoire -</span>  <span id="winRate" >{{ $winRate }} </span>%</p>
+                    <p> <span class="winRate">Win rate -</span>  <span id="winRate" >{{ $winRate }} </span>%</p>
                     <div class="winBorder">
                         <div class="winFill" style= "width:{{ $winRate }}%"></div>
                     </div>
@@ -72,9 +72,9 @@
         </div>         
     </div>
     <div id="containerReactions">
-                <div class="blocReaction"> <img src="images/cross.png" alt=""></div>
-                <div class="blocReaction"><img src="images/star.png" alt=""></div>
-                <div class="blocReaction"><img src="images/heart.png" alt=""></div>
+                <div class="blocReaction"> <img src="images/cross.png" alt="Dislike"></div>
+                <div class="blocReaction"><img src="images/star.png" alt="Super like"></div>
+                <div class="blocReaction"><img src="images/heart.png" alt="Like"></div>
             </div>
     </body>
     <script 
@@ -85,7 +85,7 @@
     <!-- <script src="{{ asset('js/app.js') }}"> </script> -->
     <script src="{{ asset('js/pageLoad.js') }}"></script>
     <script src="{{ asset('js/heroDetails.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script> -->
     <!-- <script src="{{ asset('js/heroList.js') }}"></script> -->
     
 </html>

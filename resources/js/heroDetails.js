@@ -1,7 +1,13 @@
 
-$(".refresh").click(function() {
+$(".blocReaction").click(function() {
   $date = new Date();
   $previousMillis = $date.getTime();
+
+  $(".containerHero").removeClass('containerSlide');
+$(".containerHero").width(); // trigger a DOM reflow
+$(".containerHero").addClass('containerSlide');
+  // $(".containerHero").removeClass('containerSlide');
+  // $(".containerHero").addClass('containerSlide');
   $(".containerHero").toggleClass('containerAppear'); //Brouiller le personnage tant que toutes les valeurs ne sont pas affichées
   // $("#gifLoading").css("display" , "block").delay(400);
       var settings = {
@@ -20,8 +26,7 @@ $(".refresh").click(function() {
             $containerResponse = response[$random]; //Vérifier si cette variable ne foire pas tout
             $urlImg = "https://api.opendota.com" + $containerResponse.img;
             
-            $("#bgHero").css("background-image", "url("+$urlImg+")");
-            $(".heroPhoto").attr("src", $urlImg);
+            
             $("h1").text($containerResponse.localized_name); //Nom personnage
             $(".range").text($containerResponse.attack_type); //Portée d'attaque (mêlée, distance)
             
@@ -70,6 +75,9 @@ $(".refresh").click(function() {
              $(".winFill").css("width", $winRate+"%"); //Mettre à jour la barre de taux de victoire
 
              console.log($containerResponse);
+             //Charger les nouvelles images
+             $("#bgHero").css("background-image", "url("+$urlImg+")");
+             $(".heroPhoto").attr("src", $urlImg);
              checkImageLoad(); //Fonction pour vérier que toutes les images sont chargées avant d'enlever le flou
 
             });
@@ -98,6 +106,7 @@ function checkImageLoad(){
               }
               function allImagesLoaded() {
                 console.log("charge");
+                
                 $(".containerHero").toggleClass('containerAppear'); //Enlever le flou de la page une fois qu'on a tout chargé
               }
 }
