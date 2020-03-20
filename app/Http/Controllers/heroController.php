@@ -58,4 +58,9 @@ class HeroController extends Controller
         //On renvoie la vue, avec les valeurs de la requête
         return view('hero', ['heroes' => $response[$random], 'urlImg' => $urlImg, 'winRate' => $winRate, 'nameMainStat' => $nameMainStat ]); 
     }
+
+    public function createHero(){
+        
+    }
+
 }

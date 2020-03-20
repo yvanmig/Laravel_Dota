@@ -40,7 +40,13 @@
                     <!-- @method('GET') -->
                     @csrf
                     <input type="text" name="name"> </input>
-                    <input type="submit" value="test" name="test">
+                    <input type="submit" value="hero">
+                </form>
+                <form action="cars" method="GET">
+                    <!-- @method('GET') -->
+                    @csrf
+                    <input type="text" name="name"> </input>
+                    <input type="submit" value="cars">
                 </form>
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>

@@ -54,12 +54,6 @@ $(".containerHero").addClass('containerSlide');
              $("#statint").text($containerResponse.base_int);
 
              $mainStat = $containerResponse.primary_attr;
-             //Mettre un cadre autour de la stat principale
-            //  if ($mainStat == "str") {
-            //    alert("#stat"+$mainStat);
-            //    $("#main"+$mainStat+" img").addClass("mainStatBorder");
-            //    $("#stat"+$mainStat).toggleClass("mainStatBold");
-            //  }
             if ($mainStat == "str") {
               $(".containerHero").css("background-color","rgba(151, 17, 17, 0.5)");
               $("#heroName h2").text("Strength");

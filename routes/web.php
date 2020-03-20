@@ -20,4 +20,9 @@ Route::get('/match/{heroId}', function ($heroId) { //Appel d'une route en passan
     return 'Le héro est ' .$heroId; //Afficher directement la valeur passée
 });
 
+Route::get('/cars', 'CarsController@index')->name('cars');
+Route::get('/cars-update', 'CarsController@update')->name('cars-update');
+Route::get('/cars-delete', 'CarsController@delete')->name('cars-delete');
+Route::post('/cars-insert', 'CarsController@insert')->name('cars-insert');
 
+Route::post('/hero-create', 'heroController@create')->name('hero-create');

@@ -131,6 +131,9 @@ body {
 .containerRoles {
   display: flex;
   font-size: 15px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
 }
 
 .range {

@@ -31,18 +31,15 @@
         
          <div class="wrapInfos">
                     
-            <div class="containerRoles">
-                <div class="range"> {{ $heroes->attack_type }}  - </div>
-                <div class="rolesRefresh"></div>
-            @foreach ($heroes->roles as &$heroes->roles) 
-                <div class="heroRoles"> {{ $heroes->roles }}{{$loop->last ? ' ' : '‎, '}} </div> 
-             @endforeach 
             
-            </div>
             <div class="containerWinStats">
-                <div id="containerHealth">
-                    <div id="blocHealth">santé</div>
-                    <div id="blocMana">mana</div>
+                <div class="containerRoles">
+                    <div class="range"> {{ $heroes->attack_type }}  - </div>
+                    <div class="rolesRefresh"></div>
+                @foreach ($heroes->roles as &$heroes->roles) 
+                    <div class="heroRoles"> {{ $heroes->roles }}{{$loop->last ? ' ' : '‎, '}} </div> 
+                @endforeach 
+                
                 </div>
                 <p class="charRoles"></p>
                 <div id="containerLogoStat">
@@ -86,6 +83,6 @@
     <script src="{{ asset('js/pageLoad.js') }}"></script>
     <script src="{{ asset('js/heroDetails.js') }}"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script> -->
-    <!-- <script src="{{ asset('js/heroList.js') }}"></script> -->
+
     
 </html>

@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -145,12 +145,7 @@ $(".blocReaction").click(function () {
     $("#statstr").text($containerResponse.base_str);
     $("#statagi").text($containerResponse.base_agi);
     $("#statint").text($containerResponse.base_int);
-    $mainStat = $containerResponse.primary_attr; //Mettre un cadre autour de la stat principale
-    //  if ($mainStat == "str") {
-    //    alert("#stat"+$mainStat);
-    //    $("#main"+$mainStat+" img").addClass("mainStatBorder");
-    //    $("#stat"+$mainStat).toggleClass("mainStatBold");
-    //  }
+    $mainStat = $containerResponse.primary_attr;
 
     if ($mainStat == "str") {
       $(".containerHero").css("background-color", "rgba(151, 17, 17, 0.5)");
@@ -202,7 +197,7 @@ function checkImageLoad() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 1:
 /*!*******************************************!*\
   !*** multi ./resources/js/heroDetails.js ***!
   \*******************************************/
