@@ -108,7 +108,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\yvang\APIDOTA\dota\resources\js\pageLoad.js */"./resources/js/pageLoad.js");
+module.exports = __webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\js\pageLoad.js */"./resources/js/pageLoad.js");
 
 
 /***/ })
