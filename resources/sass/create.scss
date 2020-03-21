@@ -1,0 +1,39 @@
+.wrap {
+    width: 75%;
+    margin: auto;
+}
+#containerFormHero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Spartan', sans-serif;
+    #containerForm {
+        width: 50%;
+        h1 {
+            text-align: center;
+        }
+        input {
+            border-radius: 5px;
+            border: none;
+            width: 180px;
+            height: 30px;
+            padding-left: 8px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        button {
+            width: 60px;
+            border-radius: 25px;
+            border: none;
+            height: 30px;
+        }
+    }
+    #containerHero {
+        width: 50%;
+    }
+   
+}

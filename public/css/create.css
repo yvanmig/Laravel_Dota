@@ -1,0 +1,46 @@
+.wrap {
+  width: 75%;
+  margin: auto;
+}
+
+#containerFormHero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Spartan", sans-serif;
+}
+
+#containerFormHero #containerForm {
+  width: 50%;
+}
+
+#containerFormHero #containerForm h1 {
+  text-align: center;
+}
+
+#containerFormHero #containerForm input {
+  border-radius: 5px;
+  border: none;
+  width: 180px;
+  height: 30px;
+  padding-left: 8px;
+}
+
+#containerFormHero #containerForm form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#containerFormHero #containerForm button {
+  width: 60px;
+  border-radius: 25px;
+  border: none;
+  height: 30px;
+}
+
+#containerFormHero #containerHero {
+  width: 50%;
+}
+

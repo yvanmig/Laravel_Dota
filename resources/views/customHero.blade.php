@@ -8,30 +8,32 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Spartan:200,300,400,500,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/index.css') }}"> 
+        <link rel="stylesheet" href="{{ asset('css/create.css') }}"> 
 
     </head>
     <body>
-   <h1> Créez votre profil </h1>
-        <div class="coucou">
-            <form action="{{ route('hero-create') }}" method="post">
-            @csrf
-               <input type="text" name="name" placeholder="Your name"> 
-               <input type="text" name="stat" placeholder="Your main stat"> 
-               <input type="text" name="range" placeholder="Your range"> 
-               <input type="text" name="orientation" placeholder="Your orientation"> 
-               <button> Valider </button>
-            </form>
-        </div>
-        <div class="oui">
-
+    <div class="wrap">
+        <div id="containerFormHero">
+            <div id="containerForm">
+                <h1> Créez votre profil </h1>
+                <form action="{{ route('hero-update') }}" method="get">
+                @csrf
+                <input type="text" name="name" placeholder="Your name"> 
+                <input type="text" name="stat" placeholder="Your main stat"> 
+                <input type="text" name="range" placeholder="Your range"> 
+                <input type="text" name="orientation" placeholder="Your orientation"> 
+                <button> Valider </button>
+                </form>
+            </div>
+            <div id="containerHero">
                 <div id="name"> {{ $hero->name }}</div>
                 <div id="stat"> {{ $hero->mainStat }}</div>
                 <div id="range"> {{ $hero->range }}</div>
-                <div id="orientation"> {{ $hero->orientation }}</div>
-
-
-            
+                <div id="orientation"> {{ $hero->orientation }}</div>            
+            </div>
         </div>
+       
+    </div>
     </body>
     <script 
         src="https://code.jquery.com/jquery-3.4.1.min.js"
