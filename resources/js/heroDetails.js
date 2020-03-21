@@ -65,7 +65,6 @@ $(".containerHero").addClass('containerSlide');
               $("#heroName h2").text("Intelligence");
             }
 
-            //  $(".containerHero").toggleClass('containerAppear'); //Enlever le flou une fois qu'on a tout chargé
              $(".winFill").css("width", $winRate+"%"); //Mettre à jour la barre de taux de victoire
 
              console.log($containerResponse);

@@ -156,8 +156,7 @@ $(".blocReaction").click(function () {
     } else if ($mainStat == "int") {
       $(".containerHero").css("background-color", "rgba(0, 93, 112, 0.5)");
       $("#heroName h2").text("Intelligence");
-    } //  $(".containerHero").toggleClass('containerAppear'); //Enlever le flou une fois qu'on a tout chargé
-
+    }
 
     $(".winFill").css("width", $winRate + "%"); //Mettre à jour la barre de taux de victoire
 

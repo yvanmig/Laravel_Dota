@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\hero;
 
 //Controlleur qui prend les valeurs du formulaire et renvoie la vue hero avec les bonnes valeurs
 class HeroController extends Controller
@@ -59,8 +59,6 @@ class HeroController extends Controller
         return view('hero', ['heroes' => $response[$random], 'urlImg' => $urlImg, 'winRate' => $winRate, 'nameMainStat' => $nameMainStat ]); 
     }
 
-    public function createHero(){
-        
-    }
+
 
 }

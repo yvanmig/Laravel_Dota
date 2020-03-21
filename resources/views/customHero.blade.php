@@ -11,9 +11,26 @@
 
     </head>
     <body>
-    dqz
+   <h1> Créez votre profil </h1>
         <div class="coucou">
+            <form action="{{ route('hero-create') }}" method="post">
+            @csrf
+               <input type="text" name="name" placeholder="Your name"> 
+               <input type="text" name="stat" placeholder="Your main stat"> 
+               <input type="text" name="range" placeholder="Your range"> 
+               <input type="text" name="orientation" placeholder="Your orientation"> 
+               <button> Valider </button>
+            </form>
+        </div>
+        <div class="oui">
 
+                <div id="name"> {{ $hero->name }}</div>
+                <div id="stat"> {{ $hero->mainStat }}</div>
+                <div id="range"> {{ $hero->range }}</div>
+                <div id="orientation"> {{ $hero->orientation }}</div>
+
+
+            
         </div>
     </body>
     <script 
@@ -21,7 +38,7 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous">
     </script>
-    <script src="{{ asset('js/heroDetails.js') }}"></script>
+    <!-- <script src="{{ asset('js/heroDetails.js') }}"></script> -->
 
     
 </html>

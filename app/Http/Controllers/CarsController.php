@@ -45,7 +45,7 @@ class CarsController extends Controller
         $car->speed= $request->input('speed');
         $car->year= $request->input('year');
         $car->save(); //On a fini l'opération, on sauvegarde notre objet
-        // dd($car);
-        return view('cars', ['cars' => $cars]);
+        //  dd($car);
+        // return view('carsResult', ['cars' => $car]);
     }
 }

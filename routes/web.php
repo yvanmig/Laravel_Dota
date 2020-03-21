@@ -25,4 +25,5 @@ Route::get('/cars-update', 'CarsController@update')->name('cars-update');
 Route::get('/cars-delete', 'CarsController@delete')->name('cars-delete');
 Route::post('/cars-insert', 'CarsController@insert')->name('cars-insert');
 
-Route::post('/hero-create', 'heroController@create')->name('hero-create');
+Route::get('/hero-create', 'customHeroController@index')->name('hero-create');
+Route::post('/hero-create', 'customHeroController@createHero');

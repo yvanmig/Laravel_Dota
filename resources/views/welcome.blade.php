@@ -32,15 +32,14 @@
                     API Dota2dqzdq
                 </div>
                 <form action="hero" method="GET">
-                    @method('PUT')
                     @csrf
                     <input type="submit" value="hero" name="test">
                 </form>
-                <form action="hero" method="GET">
+                <form action="hero-create" method="GET">
                     <!-- @method('GET') -->
                     @csrf
                     <input type="text" name="name"> </input>
-                    <input type="submit" value="hero">
+                    <input type="submit" value="Créer votre héro">
                 </form>
                 <form action="cars" method="GET">
                     <!-- @method('GET') -->
