@@ -21,15 +21,15 @@
                 <input type="text" name="name" placeholder="Your name"> 
                 <input type="text" name="stat" placeholder="Your main stat"> 
                 <input type="text" name="range" placeholder="Your range"> 
-                <input type="text" name="orientation" placeholder="Your orientation"> 
+                <input type="text" name="orientation" placeholder="What you're looking for"> 
                 <button> Valider </button>
                 </form>
             </div>
             <div id="containerHero">
-                <div id="name"> {{ $hero->name }}</div>
-                <div id="stat"> {{ $hero->mainStat }}</div>
-                <div id="range"> {{ $hero->range }}</div>
-                <div id="orientation"> {{ $hero->orientation }}</div>            
+                <div id="name"> Your name : {{ $hero->name }}</div>
+                <div id="stat"> Your main stat : {{ $hero->mainStat }}</div>
+                <div id="range"> Range : {{ $hero->range }}</div>
+                <div id="orientation"> Looking for : {{ $hero->orientation }}</div>            
             </div>
         </div>
        

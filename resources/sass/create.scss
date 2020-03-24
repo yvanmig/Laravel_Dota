@@ -4,26 +4,33 @@
 }
 #containerFormHero {
     display: flex;
-    align-items: center;
+    // align-items: center;
+    height: 600px;
     justify-content: space-between;
     font-family: 'Spartan', sans-serif;
+    background-color: rgba($color: rgb(35, 51, 75), $alpha: 0.8);
     #containerForm {
         width: 50%;
+        margin-top: 50px;
         h1 {
             text-align: center;
+            color: white;
         }
         input {
+            color: white;
             border-radius: 5px;
             border: none;
-            width: 180px;
+            width: 40%;
             height: 30px;
             padding-left: 8px;
+            background-color: #36465D;       
         }
         form {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
+            height: 70%;
         }
         button {
             width: 60px;
@@ -33,7 +40,13 @@
         }
     }
     #containerHero {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 40%;
         width: 50%;
+        margin: auto;
+        color: whitesmoke;
     }
    
 }

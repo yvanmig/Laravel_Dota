@@ -5,25 +5,30 @@
 
 #containerFormHero {
   display: flex;
-  align-items: center;
+  height: 600px;
   justify-content: space-between;
   font-family: "Spartan", sans-serif;
+  background-color: rgba(35, 51, 75, 0.8);
 }
 
 #containerFormHero #containerForm {
   width: 50%;
+  margin-top: 50px;
 }
 
 #containerFormHero #containerForm h1 {
   text-align: center;
+  color: white;
 }
 
 #containerFormHero #containerForm input {
+  color: white;
   border-radius: 5px;
   border: none;
-  width: 180px;
+  width: 40%;
   height: 30px;
   padding-left: 8px;
+  background-color: #36465D;
 }
 
 #containerFormHero #containerForm form {
@@ -31,6 +36,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  height: 70%;
 }
 
 #containerFormHero #containerForm button {
@@ -41,6 +47,12 @@
 }
 
 #containerFormHero #containerHero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 40%;
   width: 50%;
+  margin: auto;
+  color: whitesmoke;
 }
 
