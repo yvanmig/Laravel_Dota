@@ -17,7 +17,7 @@ class customHeroController extends Controller
         $hero = new Hero; //Créer un nouvel objet voiture, on va pouvoir le remplir avec nos valeurs
         $hero->name= $request->input('name');
         $hero->mainStat= $request->input('stat');
-        $hero->range= $request->input('range');
+        $hero->range= $request->input('age');
         $hero->orientation= $request->input('orientation');
         $hero->save();
     }
@@ -27,7 +27,7 @@ class customHeroController extends Controller
         $hero = \App\Hero::find(1);
         $hero->name= $request->input('name');
         $hero->mainStat= $request->input('stat');
-        $hero->range= $request->input('range');
+        $hero->age= $request->input('age');
         $hero->orientation= $request->input('orientation');
         $hero->save();
         return view('customHero', ['hero' => $hero]);

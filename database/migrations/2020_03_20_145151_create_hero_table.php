@@ -17,9 +17,8 @@ class CreateHeroTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('mainStat');
-            $table->string('range');
+            $table->string('age');
             $table->string('orientation');
-
 
 
             $table->timestamps();
