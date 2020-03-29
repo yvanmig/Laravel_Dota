@@ -1,7 +1,6 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/index.css": "/css/index.css",
-    "/css/create.css": "/css/create.css",
+    "/js/buttonAnimation.js": "/js/buttonAnimation.js",
     "/js/heroDetails.js": "/js/heroDetails.js",
-    "/js/pageLoad.js": "/js/pageLoad.js"
+    "/css/index.css": "/css/index.css",
+    "/css/create.css": "/css/create.css"
 }

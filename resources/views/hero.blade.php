@@ -69,19 +69,20 @@
         </div>         
     </div>
     <div id="containerReactions">
-                <div class="blocReaction"> <img src="images/cross.png" alt="Dislike"></div>
-                <div class="blocReaction"><img src="images/star.png" alt="Super like"></div>
-                <div class="blocReaction"><img src="images/heart.png" alt="Like"></div>
-            </div>
+
+        <div class="blocReaction"> <img src="images/cross.png" alt="Dislike"></div>
+        <div class="blocReaction"><img src="images/star.png" alt="Super like"></div>
+        <div class="blocReaction"><img src="images/heart.png" alt="Like"></div>
+
+    </div>
     </body>
     <script 
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous">
     </script>
-    <!-- <script src="{{ asset('js/app.js') }}"> </script> -->
-    <script src="{{ asset('js/pageLoad.js') }}"></script>
     <script src="{{ asset('js/heroDetails.js') }}"></script>
+    <script src="{{ asset('js/buttonAnimation.js') }}"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script> -->
 
     

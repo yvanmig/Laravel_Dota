@@ -1,7 +1,4 @@
-
 $(".blocReaction").click(function() {
-  $date = new Date();
-  $previousMillis = $date.getTime();
 
   $(".containerHero").removeClass('containerSlide');
 $(".containerHero").width(); // trigger a DOM reflow
@@ -103,3 +100,7 @@ function checkImageLoad(){
                 $(".containerHero").toggleClass('containerAppear'); //Enlever le flou de la page une fois qu'on a tout chargé
               }
 }
+
+
+
+

@@ -86,29 +86,39 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/pageLoad.js":
-/*!**********************************!*\
-  !*** ./resources/js/pageLoad.js ***!
-  \**********************************/
+/***/ "./resources/js/buttonAnimation.js":
+/*!*****************************************!*\
+  !*** ./resources/js/buttonAnimation.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-$(document).ready(function () {
+var animateButton = function animateButton(e) {
+  e.preventDefault; //reset animation
+
+  e.target.classList.remove('animate');
+  e.target.classList.add('animate');
   setTimeout(function () {
-    $('#gifLoading').fadeOut(600, "linear");
-  }, 3500);
-});
+    e.target.classList.remove('animate');
+  }, 700);
+};
+
+var bubblyButtons = document.getElementsByClassName("blocReaction");
+
+for (var i = 0; i < bubblyButtons.length; i++) {
+  bubblyButtons[i].addEventListener('click', animateButton, false);
+}
 
 /***/ }),
 
 /***/ 1:
-/*!****************************************!*\
-  !*** multi ./resources/js/pageLoad.js ***!
-  \****************************************/
+/*!***********************************************!*\
+  !*** multi ./resources/js/buttonAnimation.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\js\pageLoad.js */"./resources/js/pageLoad.js");
+module.exports = __webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\js\buttonAnimation.js */"./resources/js/buttonAnimation.js");
 
 
 /***/ })
