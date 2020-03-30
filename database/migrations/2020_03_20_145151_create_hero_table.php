@@ -19,6 +19,7 @@ class CreateHeroTable extends Migration
             $table->string('mainStat');
             $table->string('age');
             $table->string('orientation');
+            $table->string('picture');
 
 
             $table->timestamps();

@@ -132,7 +132,7 @@ body {
   display: flex;
   font-size: 15px;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 50%;
 }
 
@@ -218,6 +218,7 @@ body {
 }
 
 #containerReactions .blocReaction {
+  position: relative;
   width: 90px;
   height: 90px;
   background-color: white;

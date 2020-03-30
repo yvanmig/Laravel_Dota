@@ -27,4 +27,4 @@ Route::post('/cars-insert', 'CarsController@insert')->name('cars-insert');
 
 Route::get('/hero-create', 'customHeroController@index')->name('hero-create');
 Route::post('/hero-create', 'customHeroController@createHero');
-Route::get('/hero-update', 'customHeroController@updateHero')->name('hero-update'); //mettre à jour la ligne du héro
+Route::get('/hero-update', 'customHeroController@updateHero')->name('hero-update'); //mettre à jour la ligne du héro grâce au formulaire

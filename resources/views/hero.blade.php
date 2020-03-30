@@ -36,9 +36,11 @@
                 <div class="containerRoles">
                     <div class="range"> {{ $heroes->attack_type }}  - </div>
                     <div class="rolesRefresh"></div>
-                @foreach ($heroes->roles as &$heroes->roles) 
-                    <div class="heroRoles"> {{ $heroes->roles }}{{$loop->last ? ' ' : '‎, '}} </div> 
-                @endforeach 
+                    <div class="heroRoles">  @foreach ($heroes->roles as &$heroes->roles)
+                    {{ $heroes->roles }}{{$loop->last ? ' ' : '‎, '}}   
+                    @endforeach </div> 
+                     
+               
                 
                 </div>
                 <p class="charRoles"></p>
@@ -65,14 +67,15 @@
                 </div>
             
             </div>
-            <input type="button" value="refresh" class="refresh">
         </div>         
     </div>
     <div id="containerReactions">
 
-        <div class="blocReaction"> <img src="images/cross.png" alt="Dislike"></div>
-        <div class="blocReaction"><img src="images/star.png" alt="Super like"></div>
-        <div class="blocReaction"><img src="images/heart.png" alt="Like"></div>
+        <div class="blocReaction" id="dislike">
+             <img src="images/cross.png" alt="Dislike" class="reactionImg">
+            </div>
+        <div class="blocReaction" id="superLike"><img src="images/star.png" alt="Super like" class="reactionImg"></div>
+        <div class="blocReaction" id="like"><img src="images/heart.png" alt="Like" class="reactionImg" id="allo"></div>
 
     </div>
     </body>
@@ -83,7 +86,6 @@
     </script>
     <script src="{{ asset('js/heroDetails.js') }}"></script>
     <script src="{{ asset('js/buttonAnimation.js') }}"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script> -->
 
     
 </html>
