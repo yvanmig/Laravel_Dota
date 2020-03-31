@@ -16,7 +16,7 @@
         <div id="containerFormHero">
             <div id="containerForm">
             <h1> Create your own hero </h1>
-                <form action="{{ route('hero-update') }}" method="get">
+                <form action="{{ route('hero-update') }}" method="post">
                 
                 @csrf
                 
