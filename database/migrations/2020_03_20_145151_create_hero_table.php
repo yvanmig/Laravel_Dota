@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 class CreateHeroTable extends Migration
 {
@@ -21,11 +22,16 @@ class CreateHeroTable extends Migration
             $table->string('orientation');
             $table->string('picture');
 
-
             $table->timestamps();
         });
-    }
-
+        DB::table('hero')->insert(
+            ['name' => ' -- ',
+            'mainStat' => '--',
+            'age' => '-',
+            'orientation' => ' -- ',
+            'picture' => ''
+            ]);
+        }
     /**
      * Reverse the migrations.
      *
