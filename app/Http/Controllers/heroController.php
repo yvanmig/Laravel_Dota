@@ -10,7 +10,6 @@ class HeroController extends Controller
 {
     //fonction index qui affiche la vue welcome
     public function index() {
-        // echo('contact');
         return view('welcome');
     }
     public function send(Request $request) { 
@@ -37,7 +36,7 @@ class HeroController extends Controller
         } else {        
             $response = json_decode($response); //covertir notre json en variable php
             $random = rand(0, count($response)); //Créer un nombre aléatoire basé sur la taille de la réponse, qu'on utilisera comme indice pour parcour le tableau
-            $winRate = Round(($response[$random]->pro_win*100)/($response[$random]->pro_pick)); //Calcul du % de victoire, en se basant sur le nombre de pick et de victoires
+            $winRate = Round(($response[$random]->pro_win*100)/($response[$random]->pro_pick))-1; //Calcul du % de victoire, en se basant sur le nombre de pick et de victoires
             $mainStat = $response[$random]->primary_attr;
             $nameMainStat ="";
 

@@ -4,6 +4,7 @@ $button-text-color: #fff;
 $baby-blue: #f8faff;
 
 body {
+    transition: background-color 0.5s ease-out;
     font-family: 'Spartan', sans-serif;
     color: white;
     background-color: #36465D;
@@ -58,6 +59,20 @@ body {
                 transform: scale(1.1);
             }
 }
+#containerReview {
+    display: flex;
+    justify-content: space-between;
+    .blocReview {
+        width: 30%;
+        text-align: center;
+        .contentReview {
+            padding: 10px 0px;
+        }
+        .authorReview {
+            padding-bottom: 10px;
+        }
+    }
+}
 .containerHero {
     display: none;
     font-family: 'Spartan', sans-serif;
@@ -105,7 +120,6 @@ body {
     margin: auto;
 }
 #wrapHero {
-    // display: none;
     width: 80%;
     margin: auto;
     padding: 15px;
@@ -229,8 +243,7 @@ body {
     margin: auto;
     display: none;
     justify-content: space-around;
-    padding-top: 55px;
-    
+    padding-top: 55px;    
     .blocReaction {
         position: relative;
         width: 90px;
@@ -257,9 +270,6 @@ body {
         img {
             width: auto;
             height: 45%;
-           
-            
-            
         }
         &:before, &:after{
             position: absolute;

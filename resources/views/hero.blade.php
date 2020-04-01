@@ -13,7 +13,7 @@
     <body>
         <div id="blocLoading">
              <img src="images/courier.gif" alt="Image chargement" id="gifLoading">
-             <h1> We are searching your futures dates ;) </h1>
+             <h1> We are searching for your future lover ;) </h1>
         </div>
     
     <div class="containerHero">

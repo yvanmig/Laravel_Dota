@@ -93,14 +93,11 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+/* Afficher un bloc contenant un gif et petit texte pendant quelques secondes puis afficher le contenu
+*/
 $(document).ready(function () {
-  // $('.containerHero').hide();
-  // setTimeout(function() {
-  //     $("#blocLoading").fadeOut("slow").empty();
-  //   }, 5000);
   setTimeout(function () {
-    $("#blocLoading").fadeOut("slow", function () {// alert("fini");
-    });
+    $("#blocLoading").fadeOut("slow", function () {});
   }, 3000);
   setTimeout(function () {
     $('.containerHero').fadeIn("slow");

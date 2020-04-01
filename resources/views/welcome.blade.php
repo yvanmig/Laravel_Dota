@@ -62,21 +62,32 @@
                         <input type="submit" value="hero" name="test">
                     </form>
                     <form action="hero-create" method="GET">
-                        <!-- @method('GET') -->
+
                         @csrf
                         <input type="text" name="name"> </input>
                         <input type="submit" value="Créer votre héro">
                     </form>
-                    <form action="cars" method="GET">
-                        <!-- @method('GET') -->
+                    <!-- <form action="cars" method="GET">
+
                         @csrf
                         <input type="text" name="name"> </input>
                         <input type="submit" value="cars">
-                    </form>
-                    <div id="containerReview">
-                        <div class="blocReview"> randomly generated review</div>
-                        <div class="blocReview"></div>
-                        <div class="blocReview"></div>
+                    </form> -->
+                    <div id="titleReview"> <h2> What our visitor say about us </h2></div>
+                    <div id="containerReview">                    
+                        <div class="blocReview">
+                            <div class="contentReview">"Who made this ? It doesn't even work !"</div>
+                            <div class="authorReview">- Angry customer</div>
+                        </div>
+                        <div class="blocReview">
+                            <div class="contentReview">"Who made this ? It doesn't even work !"</div>
+                            <div class="authorReview">- Angry customer</div>
+                        </div>
+                        <div class="blocReview">
+                            <div class="contentReview">"Who made this ? It doesn't even work !"</div>
+                            <div class="authorReview">- Angry customer</div>
+                        </div>
+
                     </div>
                 </div>
             </div>
