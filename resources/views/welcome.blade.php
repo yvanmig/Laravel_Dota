@@ -57,7 +57,7 @@
                         
                     </div>
                     </div>
-                    <form action="hero" method="GET">
+                    <!-- <form action="hero" method="GET">
                         @csrf
                         <input type="submit" value="hero" name="test">
                     </form>
@@ -66,7 +66,7 @@
                         @csrf
                         <input type="text" name="name"> </input>
                         <input type="submit" value="Créer votre héro">
-                    </form>
+                    </form> -->
                     <!-- <form action="cars" method="GET">
 
                         @csrf
