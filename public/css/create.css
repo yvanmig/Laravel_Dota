@@ -1,3 +1,8 @@
+body {
+  background-color: #36465D;
+  overflow-x: hidden;
+}
+
 .wrap {
   width: 75%;
   margin: auto;

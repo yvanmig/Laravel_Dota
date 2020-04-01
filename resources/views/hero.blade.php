@@ -11,8 +11,13 @@
 
     </head>
     <body>
+        <div id="blocLoading">
+             <img src="images/courier.gif" alt="Image chargement" id="gifLoading">
+             <h1> We are searching your futures dates ;) </h1>
+        </div>
+    
     <div class="containerHero">
-    <img src="images/courier.gif" alt="Image chargement" id="gifLoading">
+    
         <div id="wrapHero">
         <div id="containerImgName">
             
@@ -85,7 +90,9 @@
         crossorigin="anonymous">
     </script>
     <script src="{{ asset('js/heroDetails.js') }}"></script>
+    <script src="{{ asset('js/gifLoading.js') }}"></script>
     <script src="{{ asset('js/buttonAnimation.js') }}"></script>
+    
 
     
 </html>

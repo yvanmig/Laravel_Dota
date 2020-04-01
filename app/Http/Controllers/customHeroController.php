@@ -34,7 +34,7 @@ class customHeroController extends Controller
             
             //Aller chercher 6 images aléatoires
             for ($i=0; $i<6; $i++) {
-                $random = rand(0, count($response)-1); //Créer un nombre aléatoire basé sur la taille de la réponse, qu'on utilisera comme indice pour parcour le tableau
+                $random = rand(0, (count($response)-1)); //Créer un nombre aléatoire basé sur la taille de la réponse, qu'on utilisera comme indice pour parcour le tableau
                 $urlImg[$i] = "https://api.opendota.com";
                 $urlImg[$i] = $urlImg[$i] . $response[$random]->img;
             }               

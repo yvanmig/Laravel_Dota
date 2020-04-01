@@ -1,5 +1,6 @@
 {
     "/js/buttonAnimation.js": "/js/buttonAnimation.js",
+    "/js/gifLoading.js": "/js/gifLoading.js",
     "/js/heroDetails.js": "/js/heroDetails.js",
     "/css/index.css": "/css/index.css",
     "/css/create.css": "/css/create.css"

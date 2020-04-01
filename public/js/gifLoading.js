@@ -81,59 +81,46 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/buttonAnimation.js":
-/*!*****************************************!*\
-  !*** ./resources/js/buttonAnimation.js ***!
-  \*****************************************/
+/***/ "./resources/js/gifLoading.js":
+/*!************************************!*\
+  !*** ./resources/js/gifLoading.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var animateButton = function animateButton(e) {
-  e.preventDefault; //reset animation
-
-  e.target.classList.remove('animate');
-  e.target.classList.add('animate');
+$(document).ready(function () {
+  // $('.containerHero').hide();
+  // setTimeout(function() {
+  //     $("#blocLoading").fadeOut("slow").empty();
+  //   }, 5000);
   setTimeout(function () {
-    e.target.classList.remove('animate');
-  }, 700);
-}; //Si clic sur l'image contenue dans le bouton, interagir sur le bouton
-
-
-var animateButtonImg = function animateButtonImg(e) {
-  parentId = $(e.target).parent().attr('id'); //Prendre le parent de l'image (soit le bouton)
-
-  document.getElementById(parentId).preventDefault; //reset animation
-
-  document.getElementById(parentId).classList.remove('animate');
-  document.getElementById(parentId).classList.add('animate');
+    $("#blocLoading").fadeOut("slow", function () {// alert("fini");
+    });
+  }, 3000);
   setTimeout(function () {
-    document.getElementById(parentId).classList.remove('animate');
-  }, 700);
-};
-
-var bubblyButtons = document.getElementsByClassName("blocReaction");
-var bubblyButtonsImg = document.getElementsByClassName("reactionImg");
-
-for (var i = 0; i < bubblyButtons.length; i++) {
-  bubblyButtons[i].addEventListener('click', animateButton, false);
-  bubblyButtonsImg[i].addEventListener('click', animateButtonImg, false);
-}
+    $('.containerHero').fadeIn("slow");
+  }, 4000);
+  setTimeout(function () {
+    $('#containerReactions').fadeIn("slow");
+    $('#containerReactions').css("display", "flex");
+  }, 4000);
+});
 
 /***/ }),
 
-/***/ 1:
-/*!***********************************************!*\
-  !*** multi ./resources/js/buttonAnimation.js ***!
-  \***********************************************/
+/***/ 2:
+/*!******************************************!*\
+  !*** multi ./resources/js/gifLoading.js ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\js\buttonAnimation.js */"./resources/js/buttonAnimation.js");
+module.exports = __webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\js\gifLoading.js */"./resources/js/gifLoading.js");
 
 
 /***/ })

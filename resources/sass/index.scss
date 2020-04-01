@@ -4,21 +4,62 @@ $button-text-color: #fff;
 $baby-blue: #f8faff;
 
 body {
+    font-family: 'Spartan', sans-serif;
+    color: white;
     background-color: #36465D;
     overflow-x: hidden;
+    .wrap {
+        width: 75%;
+        margin: auto;        
+        background-color: rgba($color: rgb(35, 51, 75), $alpha: 0.8);
+    }       
+        h1 {        
+            text-align: center;
+            color: white;
+        }
+        h2 {
+            color: white;
+            text-align: center;
+        }  
+    
 }
-#gifLoading {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    left: 0;
-    right: 0;
-    margin: auto;
-    display: none;
-    z-index: 10;
-    transition: all 0.3s ease-in-out;
+#containerMode {
+    display: flex;
+    justify-content: space-around;
+    .blocMode {
+        position: relative;
+        width: 40%;        
+        background-color: rgba($color: rgb(42, 67, 104), $alpha: 0.8);
+        border-radius: 15px;
+        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        h3 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+        .wrapMode {
+            width: 80%;
+            margin: auto;
+            input[type="submit" i] {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                cursor: pointer;
+            }
+            
+                
+        }
+    }.blocMode:hover{
+                transform: scale(1.1);
+            }
 }
 .containerHero {
+    display: none;
     font-family: 'Spartan', sans-serif;
     width: 55%;
     margin : auto;
@@ -29,6 +70,8 @@ body {
     transition: filter 0.3s ease-in-out;
     transition : all 1s ease-out;
     position: relative;
+    margin-top: 8%;
+    padding: 50px 0px;
     
 }
 .containerAppear {
@@ -53,7 +96,16 @@ body {
         opacity: 1;
     }
 }
+#blocLoading {
+    display: flex;
+    padding-top: 8%;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    margin: auto;
+}
 #wrapHero {
+    // display: none;
     width: 80%;
     margin: auto;
     padding: 15px;
@@ -175,7 +227,7 @@ body {
 #containerReactions {
     width: 30%;
     margin: auto;
-    display: flex;
+    display: none;
     justify-content: space-around;
     padding-top: 55px;
     

@@ -28,34 +28,56 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    API Dota2dqzdq
-                </div>
-                <form action="hero" method="GET">
-                    @csrf
-                    <input type="submit" value="hero" name="test">
-                </form>
-                <form action="hero-create" method="GET">
-                    <!-- @method('GET') -->
-                    @csrf
-                    <input type="text" name="name"> </input>
-                    <input type="submit" value="Créer votre héro">
-                </form>
-                <form action="cars" method="GET">
-                    <!-- @method('GET') -->
-                    @csrf
-                    <input type="text" name="name"> </input>
-                    <input type="submit" value="cars">
-                </form>
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="wrap">               
+                    <div id="title">
+                        <h1> Dota Tinder </h1>
+                        <h2> Ready to match with a Hero ?</h2>
+                    </div>
+                    <div id="containerMode">
+                    <div class="blocMode">
+                        <div class="wrapMode">
+                            <h3> Create your own Hero </h3>
+                             <p> Make a profile and our futuristic AI will start looking for your perfect soul mate<span id="maybeNot">*</span></p>
+                             <form action="hero-create" method="GET">
+                             @csrf
+                             <input type="submit" value="Créer votre héro">
+                    </form>
+                        </div>
+                         
+                    </div>
+                    <div class="blocMode"> 
+                        <div class="wrapMode">
+                          <h3> Match with another Hero</h3>
+                          <p> Browse our selection of beautiful individuals and pick the ones you like</p>
+                          <form action="hero" method="GET">
+                           @csrf
+                           <input type="submit" value="hero" name="test">
+                    </form>
+                        </div>
+                        
+                    </div>
+                    </div>
+                    <form action="hero" method="GET">
+                        @csrf
+                        <input type="submit" value="hero" name="test">
+                    </form>
+                    <form action="hero-create" method="GET">
+                        <!-- @method('GET') -->
+                        @csrf
+                        <input type="text" name="name"> </input>
+                        <input type="submit" value="Créer votre héro">
+                    </form>
+                    <form action="cars" method="GET">
+                        <!-- @method('GET') -->
+                        @csrf
+                        <input type="text" name="name"> </input>
+                        <input type="submit" value="cars">
+                    </form>
+                    <div id="containerReview">
+                        <div class="blocReview"> randomly generated review</div>
+                        <div class="blocReview"></div>
+                        <div class="blocReview"></div>
+                    </div>
                 </div>
             </div>
         </div>
