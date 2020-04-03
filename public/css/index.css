@@ -1,15 +1,17 @@
 body {
   transition: background-color 0.5s ease-out;
   font-family: "Spartan", sans-serif;
+  background-image: url("https://dmarket.com/blog/best-dota2-wallpapers/dota2heroes3_hu319a928e08e8922cb12f50d97f6302ab_1083277_1920x1080_resize_q90_box.jpg");
+  background-position: center top;
   color: white;
   background-color: #36465D;
   overflow-x: hidden;
+  margin: 0;
 }
 
 body .wrap {
   width: 75%;
   margin: auto;
-  background-color: rgba(35, 51, 75, 0.8);
 }
 
 body h1 {
@@ -22,9 +24,36 @@ body h2 {
   text-align: center;
 }
 
+#title {
+  background-color: #23334b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100px;
+}
+
+#title h1 {
+  margin: 0;
+}
+
+#title h2 {
+  margin: 0;
+}
+
+#mainContent {
+  margin-top: 15%;
+  padding: 40px 0 0 0;
+  background-color: rgba(35, 51, 75, 0.8);
+}
+
 #containerMode {
   display: flex;
   justify-content: space-around;
+}
+
+#containerMode a {
+  text-decoration: none;
+  color: inherit;
 }
 
 #containerMode .blocMode {
@@ -62,13 +91,19 @@ body h2 {
   transform: scale(1.1);
 }
 
+#titleReview {
+  padding-top: 50px;
+}
+
 #containerReview {
   display: flex;
   justify-content: space-between;
+  width: 80%;
+  margin: auto;
 }
 
 #containerReview .blocReview {
-  width: 30%;
+  width: 20%;
   text-align: center;
 }
 
@@ -78,6 +113,7 @@ body h2 {
 
 #containerReview .blocReview .authorReview {
   padding-bottom: 10px;
+  text-align: right;
 }
 
 .containerHero {

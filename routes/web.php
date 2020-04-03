@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'WelcomePage@index')->name('welcome');
 Route::get('/hero', 'heroController@send'); //Appeler le heroController qui appelle la vue en passant les valeurs du formulaire
 
 Route::get('/match/{heroId}', function ($heroId) { //Appel d'une route en passant une valeur dans l'URL
@@ -25,5 +27,6 @@ Route::get('/cars-update', 'CarsController@update')->name('cars-update');
 Route::get('/cars-delete', 'CarsController@delete')->name('cars-delete');
 Route::post('/cars-insert', 'CarsController@insert')->name('cars-insert');
 
-Route::get('/hero-create', 'customHeroController@index')->name('hero-create');
+// Route::get('/hero-create', 'customHeroController@index')->name('hero-create');
+Route::any('/hero-create', 'customHeroController@index')->name('hero-create');
 Route::post('/hero-update', 'customHeroController@updateHero')->name('hero-update'); //mettre à jour la ligne du héro grâce au formulaire

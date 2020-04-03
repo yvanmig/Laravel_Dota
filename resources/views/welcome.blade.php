@@ -26,34 +26,37 @@
                     @endauth
                 </div>
             @endif
-
+            <div id="title">
+                <h1> Dota Tinder </h1>
+                <h2> Ready to match with a Hero ?</h2>
+            </div>
             <div class="content">
-                <div class="wrap">               
-                    <div id="title">
-                        <h1> Dota Tinder </h1>
-                        <h2> Ready to match with a Hero ?</h2>
-                    </div>
+                
+                
+                <div class="wrap">  
+                    
+                    <div id="mainContent">
+                                     
+                    
                     <div id="containerMode">
-                    <div class="blocMode">
-                        <div class="wrapMode">
-                            <h3> Create your own Hero </h3>
-                             <p> Make a profile and our futuristic AI will start looking for your perfect soul mate<span id="maybeNot">*</span></p>
-                             <form action="hero-create" method="GET">
-                             @csrf
-                             <input type="submit" value="Créer votre héro">
-                    </form>
-                        </div>
-                         
-                    </div>
+                        
+                            <div class="blocMode">  
+                                <a href="/hero-create">                              
+                                <div class="wrapMode">
+                                    <h3> Create your own Hero </h3>
+                                    <p> Make a profile and our futuristic AI will start looking for your perfect soul mate<span id="maybeNot">*</span></p>
+                                    
+                                </div>       
+                            </a>                         
+                            </div>
+                        
                     <div class="blocMode"> 
+                        <a href="/hero">
                         <div class="wrapMode">
                           <h3> Match with another Hero</h3>
                           <p> Browse our selection of beautiful individuals and pick the ones you like</p>
-                          <form action="hero" method="GET">
-                           @csrf
-                           <input type="submit" value="hero" name="test">
-                    </form>
                         </div>
+                        </a>
                         
                     </div>
                     </div>
@@ -73,23 +76,18 @@
                         <input type="text" name="name"> </input>
                         <input type="submit" value="cars">
                     </form> -->
-                    <div id="titleReview"> <h2> What our visitor say about us </h2></div>
-                    <div id="containerReview">                    
-                        <div class="blocReview">
-                            <div class="contentReview">"Who made this ? It doesn't even work !"</div>
-                            <div class="authorReview">- Angry customer</div>
-                        </div>
-                        <div class="blocReview">
-                            <div class="contentReview">"Who made this ? It doesn't even work !"</div>
-                            <div class="authorReview">- Angry customer</div>
-                        </div>
-                        <div class="blocReview">
-                            <div class="contentReview">"Who made this ? It doesn't even work !"</div>
-                            <div class="authorReview">- Angry customer</div>
-                        </div>
-
+                    <div id="titleReview"> <h2> What our visitors say about us </h2></div>
+                    <div id="containerReview">       
+                        
+                        @foreach ($review as $r)
+                            <div class="blocReview">
+                                <div class="contentReview">" {{ $r->content }} "</div>
+                                <div class="authorReview">- {{ $r->author }}</div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </body>
@@ -98,6 +96,4 @@
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
     <script src="{{ asset('js/app.js') }}"> </script>
-    <script src="script/mustache.js"></script>
-    <script src="script/mustache.min.js"></script>
 </html>

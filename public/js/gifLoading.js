@@ -98,14 +98,14 @@
 $(document).ready(function () {
   setTimeout(function () {
     $("#blocLoading").fadeOut("slow", function () {});
-  }, 3000);
+  }, 1500);
   setTimeout(function () {
     $('.containerHero').fadeIn("slow");
-  }, 4000);
+  }, 2500);
   setTimeout(function () {
     $('#containerReactions').fadeIn("slow");
     $('#containerReactions').css("display", "flex");
-  }, 4000);
+  }, 2500);
 });
 
 /***/ }),
