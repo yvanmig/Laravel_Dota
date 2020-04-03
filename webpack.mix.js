@@ -15,7 +15,7 @@ mix.js('resources/js/app.js', 'public/js')
    .js('resources/js/buttonAnimation.js', 'public/js')
    .js('resources/js/gifLoading.js', 'public/js')
    .js('resources/js/heroDetails.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css')
-   .sass('resources/sass/index.scss', 'public/css')
-   .sass('resources/sass/match.scss', 'public/css')
-   .sass('resources/sass/create.scss', 'public/css');
+   .sass('resources/sass/_app.scss', 'public/css')
+   .sass('resources/sass/_index.scss', 'public/css')
+   .sass('resources/sass/_match.scss', 'public/css')
+   .sass('resources/sass/_create.scss', 'public/css');

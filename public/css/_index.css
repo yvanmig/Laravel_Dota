@@ -1,0 +1,512 @@
+body {
+  transition: background-color 0.5s ease-out;
+  font-family: "Spartan", sans-serif;
+  background-position: center top;
+  color: white;
+  background-color: #36465D;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+body #bg {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://dmarket.com/blog/best-dota2-wallpapers/dota2heroes3_hu319a928e08e8922cb12f50d97f6302ab_1083277_1920x1080_resize_q90_box.jpg");
+  background-position: center top;
+}
+
+body .wrap {
+  width: 75%;
+  margin: auto;
+}
+
+body h1 {
+  text-align: center;
+  color: white;
+}
+
+body h2 {
+  color: white;
+  text-align: center;
+}
+
+#title {
+  font-family: "Spartan", sans-serif;
+  background-color: rgba(35, 51, 75, 0.9);
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+#title a {
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  color: inherit;
+  padding: 0 10px;
+}
+
+#title a:hover {
+  color: rgba(172, 171, 171, 0.87);
+}
+
+#title h1 {
+  transition: color 0.2s ease-in-out;
+  color: rgba(255, 255, 255, 0.87);
+  margin: 0;
+}
+
+#title h1:hover {
+  color: rgba(172, 171, 171, 0.87);
+}
+
+#title h2 {
+  margin: 0;
+}
+
+#title #navLeft {
+  display: flex;
+  width: 35%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#title .topLinks {
+  padding-right: 25px;
+}
+
+#mainContent {
+  margin-top: 15%;
+  padding: 40px 0 0 0;
+  background-color: rgba(35, 51, 75, 0.9);
+}
+
+#containerMode {
+  display: flex;
+  justify-content: space-around;
+}
+
+#containerMode a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#containerMode .blocMode {
+  position: relative;
+  width: 40%;
+  background-color: rgba(42, 67, 104, 0.8);
+  border-radius: 15px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#containerMode .blocMode h3 {
+  text-align: center;
+}
+
+#containerMode .blocMode p {
+  text-align: center;
+}
+
+#containerMode .blocMode .wrapMode {
+  width: 80%;
+  margin: auto;
+}
+
+#containerMode .blocMode .wrapMode input[type=submit i] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#containerMode .blocMode .wrapMode #maybeNot {
+  font-size: 12px;
+  vertical-align: text-top;
+}
+
+#containerMode .blocMode:hover {
+  transform: scale(1.1);
+}
+
+#titleReview {
+  padding-top: 50px;
+}
+
+#containerReview {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+#containerReview .blocReview {
+  width: 30%;
+  text-align: center;
+}
+
+#containerReview .blocReview .contentReview {
+  padding: 10px 0px;
+}
+
+#containerReview .blocReview .authorReview {
+  padding-bottom: 10px;
+  text-align: right;
+}
+
+.containerHero {
+  display: none;
+  font-family: "Spartan", sans-serif;
+  width: 55%;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: rgba(35, 51, 75, 0.8);
+  color: #c9c9c9;
+  border-radius: 15px;
+  transition: -webkit-filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+  transition: all 1s ease-out;
+  position: relative;
+  margin-top: 8%;
+  padding: 50px 0px;
+}
+
+.containerAppear {
+  -webkit-filter: blur(0.6rem);
+          filter: blur(0.6rem);
+}
+
+.containerSlide {
+  -webkit-animation: slide 1.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+          animation: slide 1.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+@-webkit-keyframes slide {
+  49% {
+    transform: translateX(40%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-40%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  49% {
+    transform: translateX(40%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-40%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+#blocLoading {
+  display: flex;
+  padding-top: 8%;
+  flex-direction: column;
+  width: 70%;
+  align-items: center;
+  margin: auto;
+}
+
+#wrapHero {
+  width: 80%;
+  margin: auto;
+  padding: 15px;
+}
+
+#bgHero {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-filter: blur(16px);
+          filter: blur(16px);
+  background-size: cover;
+}
+
+#bgHeroFiltre {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-filter: blur(16px);
+          filter: blur(16px);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#containerImgName {
+  display: flex;
+  background-size: cover;
+  position: relative;
+}
+
+#containerImgName h2 {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.heroPhoto {
+  display: block;
+  -webkit-clip-path: circle(79% at 35% 29%);
+          clip-path: circle(79% at 35% 29%);
+  z-index: 2;
+}
+
+#heroName {
+  padding-left: 50px;
+  width: 100%;
+  z-index: 2;
+}
+
+.wrapInfos {
+  padding-top: 35px;
+}
+
+.containerRoles {
+  display: flex;
+  font-size: 15px;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.range {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.heroRoles {
+  padding-left: 6px;
+}
+
+#containerLogoStat {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.logoStat img {
+  height: 40px;
+  width: 40px;
+}
+
+.mainStatBorder {
+  border: solid 2px white;
+  border-radius: 30px;
+}
+
+.mainStatBold {
+  font-weight: bold;
+}
+
+.stat {
+  text-align: center;
+}
+
+.containerWinStats {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 35px;
+  width: 100%;
+  margin: auto;
+}
+
+#containerHeroFilter {
+  background-color: black;
+  width: 50%;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 15px;
+  position: absolute;
+}
+
+#blocWin {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+#blocWin .winBorder {
+  height: 9px;
+  width: 55%;
+  background-color: grey;
+}
+
+#blocWin .winFill {
+  height: 9px;
+  width: 0%;
+  background-color: green;
+  transition: width ease-in-out 0.7s;
+}
+
+#containerReactions {
+  width: 30%;
+  margin: auto;
+  display: none;
+  justify-content: space-around;
+  padding-top: 55px;
+}
+
+#containerReactions .blocReaction {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.2, 3, 0.4, 1);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#containerReactions .blocReaction:hover {
+  transform: scale(1.1, 1.1);
+}
+
+#containerReactions .blocReaction:active {
+  transform: scale(1);
+  background-color: #e60074;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+
+#containerReactions .blocReaction img {
+  width: auto;
+  height: 45%;
+}
+
+#containerReactions .blocReaction:before,
+#containerReactions .blocReaction:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+
+#containerReactions .blocReaction:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 20%, #ff0081 20%, transparent 30%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+
+#containerReactions .blocReaction:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, transparent 10%, #ff0081 15%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%), radial-gradient(circle, #ff0081 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+
+#containerReactions .blocReaction.animate:before {
+  display: block;
+  -webkit-animation: topBubbles ease-in-out 0.75s forwards;
+          animation: topBubbles ease-in-out 0.75s forwards;
+}
+
+#containerReactions .blocReaction.animate:after {
+  display: block;
+  -webkit-animation: bottomBubbles ease-in-out 0.75s forwards;
+          animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+@-webkit-keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+@-webkit-keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+

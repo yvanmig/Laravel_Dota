@@ -22,11 +22,11 @@ class CreateReviewTable extends Migration
         });
         DB::table('review')->insert( [
             ['content' => "I can't believe I paid for this",
-            'author' => 'Paul'],
+            'author' => 'Virginie C.'],
             ['content' => "It's okay",
-            'author' => 'Gabriel'],
+            'author' => 'Gabriel B.'],
             ['content' => "Who made this ? It doesn't even work !",
-            'author' => 'Angry user']
+            'author' => 'Grégory H.']
             ]);
     }
     

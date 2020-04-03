@@ -1,0 +1,116 @@
+body {
+  background-color: #36465D;
+  overflow-x: hidden;
+}
+
+.wrap {
+  width: 75%;
+  margin: auto;
+}
+
+#containerFormHero {
+  display: flex;
+  height: 95vh;
+  justify-content: space-between;
+  font-family: "Spartan", sans-serif;
+  background-color: rgba(35, 51, 75, 0.8);
+}
+
+#containerFormHero #containerForm {
+  width: 80%;
+  margin-top: 50px;
+}
+
+#containerFormHero #containerForm h1 {
+  text-align: center;
+  color: white;
+}
+
+#containerFormHero #containerForm h2 {
+  color: white;
+}
+
+#containerFormHero #containerForm .blocInput {
+  display: flex;
+  flex-direction: row;
+}
+
+#containerFormHero #containerForm input {
+  color: white;
+  border-radius: 5px;
+  border: none;
+  width: 80%;
+  height: 30px;
+  padding-left: 8px;
+  background-color: #36465D;
+}
+
+#containerFormHero #containerForm form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: inherit;
+  margin: 0px 75px;
+  height: 70%;
+}
+
+#containerFormHero #containerForm button {
+  width: 60px;
+  border-radius: 25px;
+  border: none;
+  height: 30px;
+}
+
+#containerFormHero #containerHero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 40%;
+  width: 50%;
+  margin: auto;
+  color: whitesmoke;
+}
+
+#containerFormHero #containerPhotos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 0px;
+  /* IMAGE STYLES */
+  /* CHECKED STYLES */
+}
+
+#containerFormHero #containerPhotos img {
+  height: auto;
+  width: 100%;
+}
+
+#containerFormHero #containerPhotos label {
+  position: relative;
+}
+
+#containerFormHero #containerPhotos [type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#containerFormHero #containerPhotos [type=radio] + img {
+  cursor: pointer;
+  -webkit-filter: contrast(0.6);
+          filter: contrast(0.6);
+  transition: all 0.2s ease-out;
+}
+
+#containerFormHero #containerPhotos [type=radio] + img:hover {
+  transform: scale(1.1);
+}
+
+#containerFormHero #containerPhotos [type=radio]:checked + img {
+  outline: 2px solid #36465D;
+  -webkit-filter: contrast(1);
+          filter: contrast(1);
+}
+

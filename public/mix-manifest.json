@@ -1,9 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/css/index.css": "/css/index.css",
-    "/css/match.css": "/css/match.css",
-    "/css/create.css": "/css/create.css",
+    "/css/_app.css": "/css/_app.css",
+    "/css/_index.css": "/css/_index.css",
+    "/css/_match.css": "/css/_match.css",
+    "/css/_create.css": "/css/_create.css",
     "/js/buttonAnimation.js": "/js/buttonAnimation.js",
     "/js/gifLoading.js": "/js/gifLoading.js",
     "/js/heroDetails.js": "/js/heroDetails.js"

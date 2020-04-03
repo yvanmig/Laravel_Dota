@@ -49643,10 +49643,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
+/***/ "./resources/sass/_app.scss":
+/*!**********************************!*\
+  !*** ./resources/sass/_app.scss ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -49654,9 +49654,20 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/sass/create.scss":
+/***/ "./resources/sass/_create.scss":
+/*!*************************************!*\
+  !*** ./resources/sass/_create.scss ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/_index.scss":
 /*!************************************!*\
-  !*** ./resources/sass/create.scss ***!
+  !*** ./resources/sass/_index.scss ***!
   \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -49665,21 +49676,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/sass/index.scss":
-/*!***********************************!*\
-  !*** ./resources/sass/index.scss ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/sass/match.scss":
-/*!***********************************!*\
-  !*** ./resources/sass/match.scss ***!
-  \***********************************/
+/***/ "./resources/sass/_match.scss":
+/*!************************************!*\
+  !*** ./resources/sass/_match.scss ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -49688,17 +49688,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/index.scss ./resources/sass/match.scss ./resources/sass/create.scss ***!
-  \**************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/_app.scss ./resources/sass/_index.scss ./resources/sass/_match.scss ./resources/sass/_create.scss ***!
+  \******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\sass\index.scss */"./resources/sass/index.scss");
-__webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\sass\match.scss */"./resources/sass/match.scss");
-module.exports = __webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\sass\create.scss */"./resources/sass/create.scss");
+__webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\sass\_app.scss */"./resources/sass/_app.scss");
+__webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\sass\_index.scss */"./resources/sass/_index.scss");
+__webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\sass\_match.scss */"./resources/sass/_match.scss");
+module.exports = __webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\sass\_create.scss */"./resources/sass/_create.scss");
 
 
 /***/ })
