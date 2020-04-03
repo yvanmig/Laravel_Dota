@@ -12,70 +12,59 @@
 
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+        <div id="bg"></div>
+            <nav id="title">
+                <div id="navLeft">
+                    <a href="{{ route('welcome') }}"> <h1> Dota Tinder </h1> </a>
+                    <a href="{{ route('hero-create') }}"> Create a hero</a>
+                    <a href="{{ route('hero') }}"> Match</a>
                 </div>
-            @endif
-            <div id="title">
-                <h1> Dota Tinder </h1>
-                <h2> Ready to match with a Hero ?</h2>
-            </div>
+                <div id="navRight">
+                    @if (Route::has('login'))
+                    <div class="topLinks">
+                        @auth
+                            <a href="{{ url('/home') }}">My profile</a>
+                        @else
+                            <a href="{{ route('login') }}">Login</a>
+    
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}">Register</a>
+                            @endif
+                        @endauth
+                    </div>
+                @endif
+                </div>                
+            </nav>
             <div class="content">
                 
                 
                 <div class="wrap">  
                     
                     <div id="mainContent">
-                                     
+                        <h2> Ready to match with a Hero ?</h2>
                     
                     <div id="containerMode">
                         
-                            <div class="blocMode">  
-                                <a href="/hero-create">                              
-                                <div class="wrapMode">
-                                    <h3> Create your own Hero </h3>
-                                    <p> Make a profile and our futuristic AI will start looking for your perfect soul mate<span id="maybeNot">*</span></p>
-                                    
-                                </div>       
-                            </a>                         
+                        <div class="blocMode">  
+                            <a href=" {{ route('hero-create') }}">                              
+                            <div class="wrapMode">
+                                <h3> Create your own Hero </h3>
+                                <p> Make a profile and our futuristic AI will start looking for your perfect soul mate<span id="maybeNot">*</span></p>
+                                <!-- *There's actually no AI or soul mate, it's all a lie. Sorry -->
+                                
+                            </div>       
+                        </a>                         
+                        </div>                        
+                        <div class="blocMode"> 
+                            <a href="{{ route('hero') }}">
+                            <div class="wrapMode">
+                            <h3> Match with another Hero</h3>
+                            <p> Browse our selection of beautiful individuals and pick the ones you like</p>
                             </div>
-                        
-                    <div class="blocMode"> 
-                        <a href="/hero">
-                        <div class="wrapMode">
-                          <h3> Match with another Hero</h3>
-                          <p> Browse our selection of beautiful individuals and pick the ones you like</p>
+                            </a>
+                            
                         </div>
-                        </a>
-                        
                     </div>
-                    </div>
-                    <!-- <form action="hero" method="GET">
-                        @csrf
-                        <input type="submit" value="hero" name="test">
-                    </form>
-                    <form action="hero-create" method="GET">
-
-                        @csrf
-                        <input type="text" name="name"> </input>
-                        <input type="submit" value="Créer votre héro">
-                    </form> -->
-                    <!-- <form action="cars" method="GET">
-
-                        @csrf
-                        <input type="text" name="name"> </input>
-                        <input type="submit" value="cars">
-                    </form> -->
                     <div id="titleReview"> <h2> What our visitors say about us </h2></div>
                     <div id="containerReview">       
                         

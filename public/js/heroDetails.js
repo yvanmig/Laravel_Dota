@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -189,38 +189,14 @@ function checkImageLoad() {
 
 /***/ }),
 
-/***/ "./resources/sass/create.scss":
-/*!************************************!*\
-  !*** ./resources/sass/create.scss ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/sass/index.scss":
-/*!***********************************!*\
-  !*** ./resources/sass/index.scss ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 0:
-/*!****************************************************************************************************!*\
-  !*** multi ./resources/js/heroDetails.js ./resources/sass/index.scss ./resources/sass/create.scss ***!
-  \****************************************************************************************************/
+/***/ 3:
+/*!*******************************************!*\
+  !*** multi ./resources/js/heroDetails.js ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\js\heroDetails.js */"./resources/js/heroDetails.js");
-__webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\sass\index.scss */"./resources/sass/index.scss");
-module.exports = __webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\sass\create.scss */"./resources/sass/create.scss");
+module.exports = __webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\js\heroDetails.js */"./resources/js/heroDetails.js");
 
 
 /***/ })

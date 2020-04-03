@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use App\hero;
+use Illuminate\Support\Facades\Auth;
 
 //Controlleur qui prend les valeurs du formulaire et renvoie la vue hero avec les bonnes valeurs
 class HeroController extends Controller
@@ -49,13 +51,11 @@ class HeroController extends Controller
                 $nameMainStat = "Intelligence";
             }
         }
-        
+        $user = Auth::user();
         $urlImg = "https://api.opendota.com";
         $urlImg = $urlImg . $response[$random]->img;
-        $test = "coucou";
-        $name = $request->input('name');
         //On renvoie la vue, avec les valeurs de la requête
-        return view('hero', ['heroes' => $response[$random], 'urlImg' => $urlImg, 'winRate' => $winRate, 'nameMainStat' => $nameMainStat ]); 
+        return view('hero', ['heroes' => $response[$random], 'urlImg' => $urlImg, 'winRate' => $winRate, 'nameMainStat' => $nameMainStat, 'user' => $user ]); 
     }
 
 

@@ -16,7 +16,7 @@
 // });
 
 Route::get('/', 'WelcomePage@index')->name('welcome');
-Route::get('/hero', 'heroController@send'); //Appeler le heroController qui appelle la vue en passant les valeurs du formulaire
+Route::get('/hero', 'heroController@send')->name('hero'); //Appeler le heroController qui appelle la vue en passant les valeurs du formulaire
 
 Route::get('/match/{heroId}', function ($heroId) { //Appel d'une route en passant une valeur dans l'URL
     return 'Le héro est ' .$heroId; //Afficher directement la valeur passée
@@ -30,3 +30,6 @@ Route::post('/cars-insert', 'CarsController@insert')->name('cars-insert');
 // Route::get('/hero-create', 'customHeroController@index')->name('hero-create');
 Route::any('/hero-create', 'customHeroController@index')->name('hero-create');
 Route::post('/hero-update', 'customHeroController@updateHero')->name('hero-update'); //mettre à jour la ligne du héro grâce au formulaire
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');

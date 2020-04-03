@@ -8,9 +8,25 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Spartan:200,300,400,500,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/index.css') }}"> 
+        <link rel="stylesheet" href="{{ asset('css/match.css') }}"> 
 
     </head>
     <body>
+        
+        @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        <a href="{{ url('/home') }}">Home</a>
+                        {{ $user->name }}
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
         <div id="blocLoading">
              <img src="images/courier.gif" alt="Image chargement" id="gifLoading">
              <h1> We are searching for your future lover ;) </h1>
