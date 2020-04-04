@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class CreateHeroTable extends Migration
 {
@@ -16,6 +17,7 @@ class CreateHeroTable extends Migration
     {
         Schema::create('hero', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('idUser');
             $table->string('name');
             $table->string('mainStat');
             $table->string('age');
@@ -24,13 +26,13 @@ class CreateHeroTable extends Migration
 
             $table->timestamps();
         });
-        DB::table('hero')->insert(
-            ['name' => ' -- ',
-            'mainStat' => '--',
-            'age' => '-',
-            'orientation' => ' -- ',
-            'picture' => ''
-            ]);
+        // DB::table('hero')->insert(
+        //     ['name' => ' -- ',
+        //     'mainStat' => '--',
+        //     'age' => '-',
+        //     'orientation' => ' -- ',
+        //     'picture' => ''
+        //     ]);
         }
     /**
      * Reverse the migrations.

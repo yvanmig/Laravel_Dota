@@ -31,5 +31,8 @@ Route::post('/cars-insert', 'CarsController@insert')->name('cars-insert');
 Route::any('/hero-create', 'customHeroController@index')->name('hero-create');
 Route::post('/hero-update', 'customHeroController@updateHero')->name('hero-update'); //mettre à jour la ligne du héro grâce au formulaire
 
+Route::any('/hero-custom', 'CustomTestController@index')->name('hero-custom');
+Route::post('/hero-custom-create', 'CustomTestController@createHero')->name('hero-custom-create');
+
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

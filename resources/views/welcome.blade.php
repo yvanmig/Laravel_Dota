@@ -16,7 +16,7 @@
             <nav id="title">
                 <div id="navLeft">
                     <a href="{{ route('welcome') }}"> <h1> Dota Tinder </h1> </a>
-                    <a href="{{ route('hero-create') }}"> Create a hero</a>
+                    <a href="{{ route('hero-custom') }}"> Create a hero</a>
                     <a href="{{ route('hero') }}"> Match</a>
                 </div>
                 <div id="navRight">
