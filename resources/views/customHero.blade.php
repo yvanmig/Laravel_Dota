@@ -36,11 +36,7 @@
                     
                 </div>
                 <button> Create </button>
-                </form>
-
-                  
-
-                
+                </form>                
             </div>
             <div id="containerHero">
                 <div id="name"> Your name : {{ $hero->name }}</div>

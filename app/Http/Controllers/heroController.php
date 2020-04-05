@@ -55,7 +55,7 @@ class HeroController extends Controller
         $urlImg = "https://api.opendota.com";
         $urlImg = $urlImg . $response[$random]->img;
         //On renvoie la vue, avec les valeurs de la requête
-        return view('hero', ['heroes' => $response[$random], 'urlImg' => $urlImg, 'winRate' => $winRate, 'nameMainStat' => $nameMainStat, 'user' => $user ]); 
+        return view('hero2', ['heroes' => $response[$random], 'urlImg' => $urlImg, 'winRate' => $winRate, 'nameMainStat' => $nameMainStat, 'user' => $user ]); 
     }
 
 

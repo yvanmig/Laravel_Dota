@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -8,41 +8,30 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('css/index.css') }}"> 
+        <link rel="stylesheet" href="{{ asset('css/_global.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/_index.css') }}"> 
 
     </head>
-    <body>
-        <div id="bg"></div>
-            <nav id="title">
-                <div id="navLeft">
-                    <a href="{{ route('welcome') }}"> <h1> Dota Tinder </h1> </a>
-                    <a href="{{ route('hero-custom') }}"> Create a hero</a>
-                    <a href="{{ route('hero') }}"> Match</a>
-                </div>
-                <div id="navRight">
-                    @if (Route::has('login'))
-                    <div class="topLinks">
-                        @auth
-                            <a href="{{ url('/home') }}">My profile</a>
-                        @else
-                            <a href="{{ route('login') }}">Login</a>
-    
-                            @if (Route::has('register'))
-                                <a href="{{ route('register') }}">Register</a>
-                            @endif
-                        @endauth
-                    </div>
-                @endif
-                </div>                
-            </nav>
-            <div class="content">
-                
-                
-                <div class="wrap">  
-                    
+    <body> --}}
+        {{-- @include('partials.nav') --}}
+        
+        
+             {{-- @extends('layouts.header')
+             @section('text','coucou') --}}
+             
+            @extends('layouts.app2')
+             
+            @section('content')
+            <div class="content">        
+                <div id="bg"></div>                      
+                <div class="wrap">                     
                     <div id="mainContent">
                         <h2> Ready to match with a Hero ?</h2>
-                    
+                       @if(Auth::check()) <h2> T'es connecté c'est cool</h2>
+                       @else <h2> T'es pas connecté c'est ringard</h2>
+                       @endif
+                  {{-- @section('title', 'Page Title') --}}
+
                     <div id="containerMode">
                         
                         <div class="blocMode">  
@@ -78,11 +67,12 @@
                 </div>
             </div>
             </div>
+            @endsection
         </div>
-    </body>
+    {{-- </body>
     <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
     <script src="{{ asset('js/app.js') }}"> </script>
-</html>
+</html> --}}

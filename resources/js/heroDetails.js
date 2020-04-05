@@ -1,3 +1,4 @@
+$(document).ready(function() {
 $(".blocReaction").click(function(e) {
   $(".containerHero").removeClass('containerSlide');
   $(".containerHero").width(); // trigger a DOM reflow
@@ -19,7 +20,7 @@ $(".blocReaction").click(function(e) {
           $containerResponse = response[$random]; //Vérifier si cette variable ne foire pas tout
           $urlImg = "https://api.opendota.com" + $containerResponse.img;        
           
-          $("h1").text($containerResponse.localized_name); //Nom personnage
+          $("h2").text($containerResponse.localized_name); //Nom personnage
           $(".range").text($containerResponse.attack_type); //Portée d'attaque (mêlée, distance)        
           
           $(".heroRoles").empty(); //Vider le contenu des divs contenant les rôles
@@ -45,13 +46,13 @@ $(".blocReaction").click(function(e) {
             $mainStat = $containerResponse.primary_attr;
           if ($mainStat == "str") {
             $(".containerHero").css("background-color","rgba(151, 17, 17, 0.5)");
-            $("#heroName h2").text("Strength");
+            $("h3").text("Strength");
           } else if ($mainStat == "agi") {
             $(".containerHero").css("background-color","rgba(15, 69, 13, 0.5)");
-            $("#heroName h2").text("Agility");
+            $("h3").text("Agility");
           } else if ($mainStat == "int") {
             $(".containerHero").css("background-color","rgba(0, 93, 112, 0.5)");
-            $("#heroName h2").text("Intelligence");
+            $("h3").text("Intelligence");
           }
 
             $(".winFill").css("width", $winRate+"%"); //Mettre à jour la barre de taux de victoire
@@ -89,6 +90,6 @@ function checkImageLoad(){
               }
 }
 
-
+});
 
 

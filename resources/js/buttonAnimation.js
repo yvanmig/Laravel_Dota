@@ -1,3 +1,6 @@
+$(document).ready(function() {
+
+
 var animateButton = function(e) {
   e.preventDefault;
   currentId=$(e.target).attr('id');
@@ -50,3 +53,4 @@ for (var i = 0; i < bubblyButtons.length; i++) {
 
 }
 
+});

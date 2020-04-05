@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Dota Tinder </title>
+@extends('layouts.app2')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Spartan:200,300,400,500,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{{ asset('css/index.css') }}"> 
-        <link rel="stylesheet" href="{{ asset('css/match.css') }}"> 
-
-    </head>
-    <body>
-
+@section('content')
         <div id="blocLoading">
              <img src="images/courier.gif" alt="Image chargement" id="gifLoading">
              <h1> We are searching for your future lover ;) </h1>
@@ -28,9 +16,9 @@
             <img src="{{ $urlImg }}" alt="Photo héro" class="heroPhoto">   
             <div id="heroName">
                 
-                 <h1>  {{ $heroes->localized_name }}</h1>   
+                 <h2>  {{ $heroes->localized_name }}</h2>   
                  <div id="mainStat">
-                    <h2> {{ $nameMainStat }}</h2>
+                    <h3> {{ $nameMainStat }}</h3>
                 </div>              
             </div>
             
@@ -85,7 +73,8 @@
         <div class="blocReaction" id="like"><img src="images/heart.png" alt="Like" class="reactionImg" id="allo"></div>
 
     </div>
-    </body>
+@endsection
+@push('scripts')
     <script 
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -94,7 +83,6 @@
     <script src="{{ asset('js/heroDetails.js') }}"></script>
     <script src="{{ asset('js/gifLoading.js') }}"></script>
     <script src="{{ asset('js/buttonAnimation.js') }}"></script>
-    
+@endpush
 
     
-</html>
