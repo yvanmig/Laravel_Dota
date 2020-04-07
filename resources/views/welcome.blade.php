@@ -35,7 +35,7 @@
                     <div id="containerMode">
                         
                         <div class="blocMode">  
-                            <a href=" {{ route('hero-create') }}">                              
+                            <a href=" {{ route('hero-custom') }}">                              
                             <div class="wrapMode">
                                 <h3> Create your own Hero </h3>
                                 <p> Make a profile and our futuristic AI will start looking for your perfect soul mate<span id="maybeNot">*</span></p>

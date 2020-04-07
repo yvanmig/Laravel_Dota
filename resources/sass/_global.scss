@@ -77,4 +77,11 @@ body {
         
         
     }
+    #navRight {
+        display: flex;
+        align-items: center;
+        li {
+            list-style: none;
+        }
+    }
 }
