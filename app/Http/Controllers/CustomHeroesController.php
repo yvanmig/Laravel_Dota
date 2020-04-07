@@ -15,6 +15,8 @@ class CustomHeroesController extends Controller
     {
         $this->middleware('auth');
     }
+    
+    //Diriger l'utilisateur vers la page montrant son héro, ou la page pour en créer un s'il n'en possède pas
     public function index() {
 
         $heroes = DB::table('hero')
@@ -96,12 +98,10 @@ class CustomHeroesController extends Controller
 //Mettre à jour le héro de l'utilisateur et retourner la vue avec les nouvelles valeurs
     public function updateHero(Request $request) {
         $hero = \App\Hero::find(1);
-        $hero->name= $request->input('name');
-        $hero->mainStat= $request->input('stat');
-        $hero->age= $request->input('age');
-        $hero->orientation= $request->input('orientation');
-        $hero->picture= $request->input('picture');
-        $hero->save();
+
+        $heroes = DB::table('hero')
+        ->where('idUser', Auth::id())
+        ->delete();
 
         $curl = curl_init();
         curl_setopt_array($curl, array(
@@ -133,6 +133,6 @@ class CustomHeroesController extends Controller
             }
         } 
 
-        return view('testCreate', ['hero' => $hero, 'urlImg' => $urlImg]);
+        return view('createHero', ['urlImg' => $urlImg]);
     }
 }

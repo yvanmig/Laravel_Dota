@@ -1,0 +1,43 @@
+h1 {
+    text-align: center;
+}
+#containerUser {
+    padding: 15px 0;
+    background-color: rgba($color: rgb(35, 51, 75), $alpha: 0.9);
+    h1 {
+        padding: 15px 0 75px 0;
+    }
+    .wrapUser {
+        width: 75%;
+        margin: auto;
+        #containerProfile {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            #name {
+                font-size: 20px;
+            }
+        }
+        div {
+            margin: 15px 0;
+        }
+        #choiceHero {
+            text-align: center;
+            input {
+                color: white;
+                border-radius: 5px;
+                border: none;
+                width: 25%;
+                height: 30px;
+                padding-left: 8px;
+                background-color: #36465D;       
+            }
+            button {
+                width: 60px;
+                border-radius: 25px;
+                border: none;
+                height: 30px;
+            }
+        }
+    }
+}

@@ -49698,10 +49698,21 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/userHero.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/userHero.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!***********************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/_index.scss ./resources/sass/_match.scss ./resources/sass/_create.scss ./resources/sass/_global.scss ***!
-  \***********************************************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/_index.scss ./resources/sass/_match.scss ./resources/sass/_create.scss ./resources/sass/userHero.scss ./resources/sass/_global.scss ***!
+  \******************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -49710,6 +49721,7 @@ __webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_
 __webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\sass\_index.scss */"./resources/sass/_index.scss");
 __webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\sass\_match.scss */"./resources/sass/_match.scss");
 __webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\sass\_create.scss */"./resources/sass/_create.scss");
+__webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\sass\userHero.scss */"./resources/sass/userHero.scss");
 module.exports = __webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\sass\_global.scss */"./resources/sass/_global.scss");
 
 

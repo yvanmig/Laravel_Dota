@@ -87,6 +87,7 @@ body h2 {
 .containerNav #navRight {
   display: flex;
   align-items: center;
+  padding-right: 30px;
 }
 
 .containerNav #navRight li {

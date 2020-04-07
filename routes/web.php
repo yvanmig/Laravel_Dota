@@ -28,11 +28,12 @@ Route::get('/cars-delete', 'CarsController@delete')->name('cars-delete');
 Route::post('/cars-insert', 'CarsController@insert')->name('cars-insert');
 
 // Route::get('/hero-create', 'customHeroController@index')->name('hero-create');
-Route::any('/hero-create', 'customHeroController@index')->name('hero-create');
-Route::post('/hero-update', 'customHeroController@updateHero')->name('hero-update'); //mettre à jour la ligne du héro grâce au formulaire
+// Route::any('/hero-create', 'customHeroController@index')->name('hero-create');
+// Route::post('/hero-update', 'customHeroController@updateHero')->name('hero-update'); //mettre à jour la ligne du héro grâce au formulaire
 
 Route::any('/hero-custom', 'CustomHeroesController@index')->name('hero-custom');
 Route::post('/hero-custom-create', 'CustomHeroesController@createHero')->name('hero-custom-create');
+Route::any('/hero-custom-update', 'CustomHeroesController@updateHero')->name('hero-custom-update');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
