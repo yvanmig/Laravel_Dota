@@ -73,6 +73,8 @@
         <div class="blocReaction" id="like"><img src="images/heart.png" alt="Like" class="reactionImg" id="allo"></div>
 
     </div>
+  
+
 @endsection
 @push('scripts')
     <script 

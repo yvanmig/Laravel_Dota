@@ -47,10 +47,10 @@ var animateButtonImg = function(e) {
 var bubblyButtons = document.getElementsByClassName("blocReaction");
 var bubblyButtonsImg = document.getElementsByClassName("reactionImg");
 
+
 for (var i = 0; i < bubblyButtons.length; i++) {
   bubblyButtons[i].addEventListener('click', animateButton, false);
   bubblyButtonsImg[i].addEventListener('click', animateButtonImg, false);
-
 }
 
 });
