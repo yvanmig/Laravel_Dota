@@ -7,21 +7,22 @@ body {
     margin: auto;
 }
 #containerFormHero {
+    text-align: left;
     display: flex;
-    // align-items: center;
-    height: 95vh;
-    justify-content: space-between;
+    justify-content: center;
+    // height: 95vh;
     font-family: 'Spartan', sans-serif;
     background-color: rgba($color: rgb(35, 51, 75), $alpha: 0.8);
     #containerForm {
         width: 80%;        
         margin-top: 50px;
-        h1 {
-            text-align: center;
+        h1, h2{
+            text-align: left;
             color: white;
+            padding: 12px 0;
         }
         h2 {
-            color: white;
+            // padding: 12px 0 12px 0;
         }
         .blocInput {
             display: flex;
@@ -34,21 +35,42 @@ body {
             width: 80%;
             height: 30px;
             padding-left: 8px;
-            background-color: #36465D;       
+            background-color: #36465D;     
+            text-align: left;  
+            margin: 5px 0;
+            
         }
         form {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            align-items: inherit;
             margin: 0px 75px;
-            height: 70%;
+            ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: rgb(150, 160, 173);
+              }
+            .form-control:focus {
+                color: white;
+                background-color: rgb(110, 139, 179);
+                border-color: #a1cbef;
+                outline: 0;
+                box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+            }
         }
         button {
+            color: white;
             width: 60px;
-            border-radius: 25px;
+            left: 0;
+            right: 0;
+            margin: 20px auto;
+            border-radius: 5px;
             border: none;
+            width: 25%;
             height: 30px;
+            background-color: #36465D;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        button:hover {
+            transform: scale(1.1,1.1);
         }
     }
     #containerHero {
@@ -61,7 +83,6 @@ body {
         color: whitesmoke;
     }
     #containerPhotos {
-
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
@@ -98,3 +119,4 @@ body {
     }
    
 }
+

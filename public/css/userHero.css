@@ -42,12 +42,10 @@ h1 {
   height: 30px;
   padding-left: 8px;
   background-color: #36465D;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-#containerUser .wrapUser #choiceHero button {
-  width: 60px;
-  border-radius: 25px;
-  border: none;
-  height: 30px;
+#containerUser .wrapUser #choiceHero input:hover {
+  transform: scale(1.1, 1.1);
 }
 

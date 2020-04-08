@@ -9,6 +9,9 @@ $baby-blue: #f8faff;
     margin-top: 15%;
     padding: 40px 0 0 0;
     background-color: rgba($color: rgb(35, 51, 75), $alpha: 0.9);
+    h2 {
+        padding-bottom: 25px;
+    }
 }
 #containerMode {
     display: flex;
@@ -137,6 +140,7 @@ $baby-blue: #f8faff;
     background-size: cover;
     position: relative;
     h2 {
+        
         font-size: 35px;
         font-weight: 300;
         text-align: left;

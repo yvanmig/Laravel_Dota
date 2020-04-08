@@ -4,6 +4,10 @@
   background-color: rgba(35, 51, 75, 0.9);
 }
 
+#mainContent h2 {
+  padding-bottom: 25px;
+}
+
 #containerMode {
   display: flex;
   justify-content: space-around;
