@@ -11623,7 +11623,6 @@ h1 {
 }
 
 #containerUser {
-  padding: 15px 0;
   background-color: rgba(35, 51, 75, 0.9);
 }
 
@@ -11639,7 +11638,6 @@ h1 {
 #containerUser .wrapUser #containerProfile {
   display: flex;
   justify-content: space-around;
-  align-items: center;
 }
 
 #containerUser .wrapUser #containerProfile #name {

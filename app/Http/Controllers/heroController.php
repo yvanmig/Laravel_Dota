@@ -58,18 +58,14 @@ class HeroController extends Controller
         //On renvoie la vue, avec les valeurs de la requête
         return view('hero2', ['heroes' => $response[$random], 'urlImg' => $urlImg, 'winRate' => $winRate, 'nameMainStat' => $nameMainStat, 'user' => $user ]); 
     }
+
     //Incrémenter les compteurs qui traquent le nombre de likes, dislikes et super likes donnés par l'utilisateur
-    public function store(Request $request)
+    public function store()
     {
-        $hero = new Hero; 
+        $likeId = $_POST['like_id'];
         DB::table('users_data')
             ->where('id_user', Auth::id())
-            ->increment('likes');
-   
-        //    $hero->save();
-           return response()->json(['success'=>'Data is successfully added']);
+            ->increment($likeId); //Utiliser l'id du bouton pour déterminer la colonne à incrémenter
+        return response()->json(['success'=>$likeId]);
     }
-
-
-
 }

@@ -86,11 +86,6 @@ class RegisterController extends Controller
             'super_likes' => 0,
         ]); 
         return $user;
-        // $data->id_user= Auth::id(); //renseigner l'id de l'utilisateur
-        // // $userData->id_user= 2; //renseigner l'id de l'utilisateur
-        // $userData->likes= 0;
-        // $userData->dislikes= 0;
-        // $userData->super_likes= 0;        
-        // $userData->save(); //Enregistrer le nouveau héro
+
     }
 }

@@ -6,7 +6,6 @@ h1 {
     text-align: center;
 }
 #containerUser {
-    padding: 15px 0;
     background-color: rgba($color: rgb(35, 51, 75), $alpha: 0.9);
     h1 {
         padding: 15px 0 75px 0;
@@ -17,7 +16,6 @@ h1 {
         #containerProfile {
             display: flex;
             justify-content: space-around;
-            align-items: center;
             #name {
                 font-size: 20px;
             }

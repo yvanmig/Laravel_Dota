@@ -20,8 +20,8 @@ class CustomHeroesController extends Controller
     //Diriger l'utilisateur vers la page montrant son héro, ou la page pour en créer un s'il n'en possède pas
     public function index() {
         $heroes = DB::table('hero')
-        ->where('idUser', Auth::id())
-        ->get();        
+                    ->where('idUser', Auth::id())
+                    ->first();        
 
         //Vérifier si l'utilisateur a déjà créé un personnage dans la base de données
         $check = DB::table('hero')
@@ -31,20 +31,20 @@ class CustomHeroesController extends Controller
         //Si il en a déjà créé un, l'envoyer vers la page présentant le perso
         if ($check) {
             $user = DB::table('users')
-                ->where('id', Auth::id())
-                ->get();
+                    ->where('id', Auth::id())
+                    ->first();
 
-                //Parser la date de création pour change son format d'affichage
-            foreach($user as $u){
-                $timeParsed = Carbon::parse($u->created_at)->isoFormat('LLLL');
-            }
+            //Parser la date de création pour change son format d'affichage            
+            $timeParsed = Carbon::parse($user->created_at)->isoFormat('LLLL');   
+            $likes = DB::table('users_data')
+                        ->where('id_user', Auth::id())
+                        ->first();         
                 
-            return view('userHero', ['heroes' => $heroes, 'user' => $user, 'timeParsed' => $timeParsed]);
+            return view('userHero', ['heroes' => $heroes, 'user' => $user, 'timeParsed' => $timeParsed, 'likes' => $likes]);
         }
 
         //Sinon, l'envoyer sur la page de création
         if (!$check) {
-
             $curl = curl_init();
             curl_setopt_array($curl, array(
             CURLOPT_URL => "https://api.opendota.com/api/heroStats",
@@ -100,12 +100,22 @@ class CustomHeroesController extends Controller
          //Sélectionner les héros créés par l'utilisateur actuellement connecté
         $heroes = DB::table('hero')
                         ->where('idUser', Auth::id())
-                        ->get();
+                        ->first();
         $user = DB::table('users')
                     ->where('id', Auth::id())
-                    ->get();
+                    ->first();
+        $likes = DB::table('users_data')
+                    ->where('id_user', Auth::id())
+                    ->first(); 
 
-        return view('userHero', ['heroes' => $heroes, 'user' => $user]);
+            
+                            //Parser la date de création pour change son format d'affichage
+                            $timeParsed = Carbon::parse($user->created_at)->isoFormat('LLLL');
+                            
+                        return view('userHero', ['heroes' => $heroes, 'user' => $user, 'timeParsed' => $timeParsed, 'likes' => $likes]);
+                    
+        // return view('userHero', ['heroes' => $heroes, 'user' => $user]);
+        
     }
 
 //Mettre à jour le héro de l'utilisateur et retourner la vue avec les nouvelles valeurs

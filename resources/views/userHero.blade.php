@@ -8,27 +8,26 @@
                 <div id="containerProfile">
                     <div id="containerHero">
                         <h2> Your hero </h2>
-                        @foreach ($heroes as $h)
+
                         <div id="profileLeft">
-                            <div id="name"> Your name : {{ $h->name }}</div>
-                            <div id="picture"> <img src={{ $h->picture }} alt=""></div>
+                            <div id="name"> Your name : {{ $heroes->name }}</div>
+                            <div id="picture"> <img src={{ $heroes->picture }} alt=""></div>
                         </div>
                         <div id="profileRight">
-                            <div id="stat"> Your main stat : {{ $h->mainStat }}</div>
-                            <div id="range"> Age : {{ $h->age }}</div>
-                            <div id="orientation"> Looking for : {{ $h->orientation }}</div> 
+                            <div id="stat"> Your main stat : {{ $heroes->mainStat }}</div>
+                            <div id="range"> Age : {{ $heroes->age }}</div>
+                            <div id="orientation"> Looking for : {{ $heroes->orientation }}</div> 
                         </div>
-                      @endforeach
+
                     </div>
                    
                     <div id="containerUser">
                         <h2> Your profile</h2>
-                        @foreach ($user as $user)
-                            
-                        @endforeach
                         {{ $user->name}}
                         <p> Member since : {{ $timeParsed }} </p>
-                        <p>  </p>
+                        <p> Number of dislikes : {{ $likes->dislikes}}  </p>
+                        <p> Number of likes : {{ $likes->likes}}  </p>
+                        <p> Number of super likes : {{ $likes->super_Likes}}  </p>
                         
                     </div>
                    

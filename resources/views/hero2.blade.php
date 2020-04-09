@@ -66,17 +66,19 @@
     </div>
     <div id="containerReactions">
 
-        <div class="blocReaction" id="dislike">
+        <div class="blocReaction" id="dislike" data-id="dislikes">
              <img src="images/cross.png" alt="Dislike" class="reactionImg">
             </div>
-        <div class="blocReaction" id="superLike"><img src="images/star.png" alt="Super like" class="reactionImg"></div>
-        <div class="blocReaction" id="like"><img src="images/heart.png" alt="Like" class="reactionImg" id="allo"></div>
+        <div class="blocReaction" id="superLike" data-id="super_Likes"><img src="images/star.png" alt="Super like" class="reactionImg"></div>
+        <div class="blocReaction" id="like" data-id="likes"><img src="images/heart.png" alt="Like" class="reactionImg" id="allo"></div>
 
     </div>
   
     
 
-        <button type="button" class="download" data-id="1">Download</button>
+        <button type="button" class="download" data-id="dislikes">Dislike</button>
+        <button type="button" class="download" data-id="superlike">Super Like</button>
+        <button type="button" class="download" data-id="likes">Like</button>
 
 
 
