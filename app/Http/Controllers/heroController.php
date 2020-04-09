@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\hero;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 //Controlleur qui prend les valeurs du formulaire et renvoie la vue hero avec les bonnes valeurs
 class HeroController extends Controller
@@ -56,6 +57,17 @@ class HeroController extends Controller
         $urlImg = $urlImg . $response[$random]->img;
         //On renvoie la vue, avec les valeurs de la requête
         return view('hero2', ['heroes' => $response[$random], 'urlImg' => $urlImg, 'winRate' => $winRate, 'nameMainStat' => $nameMainStat, 'user' => $user ]); 
+    }
+    //Incrémenter les compteurs qui traquent le nombre de likes, dislikes et super likes donnés par l'utilisateur
+    public function store(Request $request)
+    {
+        $hero = new Hero; 
+        DB::table('users_data')
+            ->where('id_user', Auth::id())
+            ->increment('likes');
+   
+        //    $hero->save();
+           return response()->json(['success'=>'Data is successfully added']);
     }
 
 

@@ -74,6 +74,13 @@
 
     </div>
   
+    
+
+        <button type="button" class="download" data-id="1">Download</button>
+
+
+
+
 
 @endsection
 @push('scripts')
@@ -85,6 +92,7 @@
     <script src="{{ asset('js/heroDetails.js') }}"></script>
     <script src="{{ asset('js/gifLoading.js') }}"></script>
     <script src="{{ asset('js/buttonAnimation.js') }}"></script>
+    <script src="{{ asset('js/dataUpdate.js') }}"></script>
 @endpush
 
     

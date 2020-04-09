@@ -17,6 +17,7 @@
 
 Route::any('/', 'WelcomePageController@index')->name('welcome');
 Route::get('/hero', 'heroController@send')->name('hero'); //Appeler le heroController qui appelle la vue en passant les valeurs du formulaire
+Route::post('/hero', 'heroController@store')->name('hero');
 
 Route::get('/match/{heroId}', function ($heroId) { //Appel d'une route en passant une valeur dans l'URL
     return 'Le héro est ' .$heroId; //Afficher directement la valeur passée

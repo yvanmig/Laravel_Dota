@@ -4,9 +4,11 @@
     <div class="wrap">
         <div id="containerUser">
             <div class="wrapUser">      
-                <h1> Your hero </h1>
+                
                 <div id="containerProfile">
-                    @foreach ($heroes as $h)
+                    <div id="containerHero">
+                        <h2> Your hero </h2>
+                        @foreach ($heroes as $h)
                         <div id="profileLeft">
                             <div id="name"> Your name : {{ $h->name }}</div>
                             <div id="picture"> <img src={{ $h->picture }} alt=""></div>
@@ -17,6 +19,19 @@
                             <div id="orientation"> Looking for : {{ $h->orientation }}</div> 
                         </div>
                       @endforeach
+                    </div>
+                   
+                    <div id="containerUser">
+                        <h2> Your profile</h2>
+                        @foreach ($user as $user)
+                            
+                        @endforeach
+                        {{ $user->name}}
+                        <p> Member since : {{ $timeParsed }} </p>
+                        <p>  </p>
+                        
+                    </div>
+                   
                 </div>
 
                     <div id="choiceHero">
