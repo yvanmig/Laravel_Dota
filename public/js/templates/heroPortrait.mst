@@ -1,6 +1,0 @@
-{{ #teams }}
-    <div class="blocClub">
-        <p> {{ pickCount }} </p>
-        <p> {{ banCount }} </p>
-    </div>                        
-{{ /teams}}

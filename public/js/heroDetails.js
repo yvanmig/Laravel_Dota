@@ -104,7 +104,7 @@ $(document).ready(function () {
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://api.opendota.com/api/heroStats",
+      "url": "https://cors-anywhere.herokuapp.com/https://api.opendota.com/api/heroStats",
       "method": "GET",
       "headers": {
         "cookie": "__cfduid=d5d64367cc61de7f6538056c9126e2eda1582288201"

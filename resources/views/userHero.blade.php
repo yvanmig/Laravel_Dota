@@ -2,33 +2,29 @@
 @section('content')
         {{-- @include('partials.nav') --}}
     <div class="wrap">
+
         <div id="containerUser">
+
             <div class="wrapUser">      
                 
                 <div id="containerProfile">
-                    <div id="containerHero">
-                        <h2> Your hero </h2>
 
-                        <div id="profileLeft">
+                    <div class="blocUser">
+                        <h2> Your hero </h2>
                             <div id="name"> Your name : {{ $heroes->name }}</div>
                             <div id="picture"> <img src={{ $heroes->picture }} alt=""></div>
-                        </div>
-                        <div id="profileRight">
                             <div id="stat"> Your main stat : {{ $heroes->mainStat }}</div>
                             <div id="range"> Age : {{ $heroes->age }}</div>
                             <div id="orientation"> Looking for : {{ $heroes->orientation }}</div> 
-                        </div>
-
                     </div>
                    
-                    <div id="containerUser">
+                    <div class="blocUser">
                         <h2> Your profile</h2>
-                        {{ $user->name}}
-                        <p> Member since : {{ $timeParsed }} </p>
-                        <p> Number of dislikes : {{ $likes->dislikes}}  </p>
-                        <p> Number of likes : {{ $likes->likes}}  </p>
-                        <p> Number of super likes : {{ $likes->super_Likes}}  </p>
-                        
+                        <div id="uName"> {{ $user->name}}</div>
+                        <div id="uTime"> <p> Member since : {{ $timeParsed }} </p></div>
+                        <div id="uDis"> <p> Number of dislikes : {{ $likes->dislikes}}  </p></div>
+                        <div id="uLik"> <p> Number of likes : {{ $likes->likes}}  </p></div>
+                        <div id="uSup"> <p> Number of super likes : {{ $likes->super_Likes}}  </p></div>                        
                     </div>
                    
                 </div>
@@ -40,7 +36,9 @@
                     </div>
 
             </div>
+
         </div>       
+        
     </div>
 
 

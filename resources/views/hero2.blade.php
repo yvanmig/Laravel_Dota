@@ -73,16 +73,6 @@
         <div class="blocReaction" id="like" data-id="likes"><img src="images/heart.png" alt="Like" class="reactionImg" id="allo"></div>
 
     </div>
-  
-    
-
-        <button type="button" class="download" data-id="dislikes">Dislike</button>
-        <button type="button" class="download" data-id="superlike">Super Like</button>
-        <button type="button" class="download" data-id="likes">Like</button>
-
-
-
-
 
 @endsection
 @push('scripts')
