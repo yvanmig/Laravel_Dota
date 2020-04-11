@@ -136,3 +136,22 @@ body {
           filter: contrast(1);
 }
 
+#containerFormHard form {
+  display: flex;
+  flex-direction: column;
+}
+
+#containerFormHard form #containerCanvas {
+  position: relative;
+}
+
+#containerFormHard form #containerCanvas .inputElement {
+  position: absolute;
+  top: 50px;
+}
+
+#containerFormHard form #containerCanvas canvas {
+  margin: 30px;
+  background-color: #455cdf;
+}
+

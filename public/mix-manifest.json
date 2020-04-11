@@ -8,6 +8,7 @@
     "/css/_global.css": "/css/_global.css",
     "/js/buttonAnimation.js": "/js/buttonAnimation.js",
     "/js/dataUpdate.js": "/js/dataUpdate.js",
+    "/js/formHard.js": "/js/formHard.js",
     "/js/gifLoading.js": "/js/gifLoading.js",
     "/js/heroDetails.js": "/js/heroDetails.js"
 }

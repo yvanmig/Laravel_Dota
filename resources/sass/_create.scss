@@ -119,4 +119,22 @@ body {
     }
    
 }
+#containerFormHard {
+    form {
+        display: flex;
+    flex-direction: column;
+    #containerCanvas {
+        position: relative;
+        .inputElement {
+            position: absolute;
+            top : 50px;
+        }
+        canvas {
+            margin: 30px;
+            background-color: rgb(69, 92, 223);
+        }
+    }
+    
+    }
+}
 

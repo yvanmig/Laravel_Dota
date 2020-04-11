@@ -34,6 +34,9 @@ Route::post('/cars-insert', 'CarsController@insert')->name('cars-insert');
 
 Route::any('/hero-custom', 'CustomHeroesController@index')->name('hero-custom');
 Route::post('/hero-custom-create', 'CustomHeroesController@createHero')->name('hero-custom-create');
+Route::any('/hero-custom-hard', function() {
+    return view('createHeroHard');
+});
 Route::any('/hero-custom-update', 'CustomHeroesController@updateHero')->name('hero-custom-update');
 
 Auth::routes();

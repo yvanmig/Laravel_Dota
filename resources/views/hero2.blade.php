@@ -85,6 +85,7 @@
     <script src="{{ asset('js/gifLoading.js') }}"></script>
     <script src="{{ asset('js/buttonAnimation.js') }}"></script>
     <script src="{{ asset('js/dataUpdate.js') }}"></script>
+    {{-- <script src="{{ asset('js/heroData.js') }}"></script> --}}
 @endpush
 
     
