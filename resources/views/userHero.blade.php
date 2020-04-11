@@ -16,6 +16,11 @@
                             <div id="stat"> Your main stat : {{ $heroes->mainStat }}</div>
                             <div id="range"> Age : {{ $heroes->age }}</div>
                             <div id="orientation"> Looking for : {{ $heroes->orientation }}</div> 
+                            
+                            @foreach ($name as $name)
+                            {{ $name }}
+                            @endforeach
+                            
                     </div>
                    
                     <div class="blocUser">

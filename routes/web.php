@@ -37,6 +37,7 @@ Route::post('/hero-custom-create', 'CustomHeroesController@createHero')->name('h
 Route::any('/hero-custom-hard', function() {
     return view('createHeroHard');
 });
+Route::post('/hero-custom-hard', 'CustomHeroesController@createHard')->name('hero-custom-hard');
 Route::any('/hero-custom-update', 'CustomHeroesController@updateHero')->name('hero-custom-update');
 
 Auth::routes();

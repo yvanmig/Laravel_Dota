@@ -11118,6 +11118,33 @@ body {
   flex-direction: column;
 }
 
+#containerFormHard form input {
+  width: 30%;
+  margin: 15px 0;
+}
+
+#containerFormHard form #containerName {
+  display: flex;
+  position: relative;
+  padding-bottom: 10px;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+#containerFormHard form #containerName #checkName {
+  margin-left: 10px;
+  background-color: #36465D;
+  padding: 6px 9px;
+  cursor: pointer;
+}
+
+#containerFormHard form #containerName #errorName {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 13px;
+}
+
 #containerFormHard form #containerCanvas {
   position: relative;
 }

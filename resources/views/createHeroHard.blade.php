@@ -6,10 +6,27 @@
         <div id="containerFormHard">
            
 
-                <form action="{{ route('hero-custom-create') }}" method="post">                                   
+                <form action="{{ route('hero-custom-hard') }}" method="post">                                   
                     @csrf           
-                    <h1> Create your own hero</h1> 
-                    <input type="text" name="name" placeholder="Your name" required class="form-control"> 
+                    <h1> Create your own hero : Hardcore Edition</h1> 
+                    <div id="containerName">
+                        <input type="text" name="name" placeholder="Name" required class="form-control" value="Name" id="nameUser" maxlength="5"> 
+                        <div id="checkName"> Verify  </div>
+                        <div id="errorName"></div>
+                        
+                    </div>
+                    
+                    <div id="containerNameValidation">
+                        
+                        <div id="generateName"> Generate New Name</div>
+                        <div id="userNameValidation"></div>
+                        
+                    </div>
+                    
+                    <input type="text" name="stat" placeholder="mainStat" required class="form-control" > 
+                    <input type="text" name="age" placeholder="age" required class="form-control" > 
+                    <input type="text" name="orientation" placeholder="orient" required class="form-control" > 
+                    <input type="text" name="picture" placeholder="pic" required class="form-control" > 
                     <select id="let1" name="let1">
                         <option value="A">A</option>
                         <option value="B">B</option>
