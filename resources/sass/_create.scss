@@ -144,21 +144,43 @@ body {
                 left: 0;
                 bottom: 0;
                 font-size: 13px;
+            }            
+        }
+         
+        #containerCanvas {
+            position: relative;
+            .inputElement {
+                position: absolute;
+                top : 50px;
             }
-            
-        }
-    #containerCanvas {
-        position: relative;
-        .inputElement {
-            position: absolute;
-            top : 50px;
-        }
-        canvas {
-            margin: 30px;
-            background-color: rgb(69, 92, 223);
+            canvas {
+                margin: 30px;
+                background-color: rgb(69, 92, 223);
+            }
+        }    
+    }
+    .containerLimit {
+        background-color: rgb(68, 99, 202);
+        text-align: center;
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+        width: 400px;
+        height: 0;
+        transform-origin: top;
+        position: absolute;
+        div {
+            transition: opacity 0.9s 0.5s;
+            opacity: 0;
         }
     }
-    
-    }
+}
+
+.open{
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transform-origin: top;
+    width: 400px !important;
+    height: 400px !important;
 }
 

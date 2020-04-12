@@ -11,6 +11,16 @@
                     <h1> Create your own hero : Hardcore Edition</h1> 
                     <div id="containerName">
                         <input type="text" name="name" placeholder="Name" required class="form-control" value="Name" id="nameUser" maxlength="5"> 
+
+                    <div class="containerLimit">
+                        <div>
+                            <h2> Vous avez dépassé la limite de caractères (5 max)</h2>
+                            <p> Cliquer sur le bouton "+" pour en ajouter</p>
+                        </div>
+                        
+                    </div>
+
+
                         <div id="checkName"> Verify  </div>
                         <div id="errorName"></div>
                         
@@ -63,5 +73,6 @@
         crossorigin="anonymous">
     </script>
     <script src="{{ asset('js/formHard.js') }}"></script>
+    <script src="{{ asset('js/verifyButton.js') }}"></script>
     
 @endpush

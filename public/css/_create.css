@@ -182,3 +182,28 @@ body {
   background-color: #455cdf;
 }
 
+#containerFormHard .containerLimit {
+  background-color: #4463ca;
+  text-align: center;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  width: 400px;
+  height: 0;
+  transform-origin: top;
+  position: absolute;
+}
+
+#containerFormHard .containerLimit div {
+  transition: opacity 0.9s 0.5s;
+  opacity: 0;
+}
+
+.open {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transform-origin: top;
+  width: 400px !important;
+  height: 400px !important;
+}
+

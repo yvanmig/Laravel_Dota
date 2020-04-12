@@ -10,5 +10,6 @@
     "/js/dataUpdate.js": "/js/dataUpdate.js",
     "/js/formHard.js": "/js/formHard.js",
     "/js/gifLoading.js": "/js/gifLoading.js",
-    "/js/heroDetails.js": "/js/heroDetails.js"
+    "/js/heroDetails.js": "/js/heroDetails.js",
+    "/js/verifyButton.js": "/js/verifyButton.js"
 }
