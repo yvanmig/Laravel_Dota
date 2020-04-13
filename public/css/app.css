@@ -11165,23 +11165,67 @@ body {
   opacity: 0;
   transition: 0.5s ease-in-out;
   width: 400px;
-  height: 0;
   transform-origin: top;
   position: absolute;
+  z-index: -5;
 }
 
 #containerFormHard .containerLimit div {
   transition: opacity 0.9s 0.5s;
   opacity: 0;
+  position: relative;
+}
+
+#containerFormHard .containerLimit div h2 {
+  padding-top: 40px;
+}
+
+#containerFormHard .containerLimit div #annoyingButton {
+  background-color: rgba(35, 51, 75, 0.8);
+  border: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#containerFormHard .containerLimit div #closeLimit {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+
+#containerFormHard .containerLimit div #closeLimit img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  width: 100%;
+  height: auto;
+}
+
+#containerFormHard .containerLimit div #annoyingButtonHitBox {
+  margin: auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  opacity: 0;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s;
 }
 
 .open {
   top: 0;
   left: 0;
-  opacity: 1;
+  opacity: 1 !important;
+  z-index: 10;
   transform-origin: top;
   width: 400px !important;
-  height: 400px !important;
 }
 
 #mainContent {

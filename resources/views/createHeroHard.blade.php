@@ -9,17 +9,19 @@
                 <form action="{{ route('hero-custom-hard') }}" method="post">                                   
                     @csrf           
                     <h1> Create your own hero : Hardcore Edition</h1> 
+
                     <div id="containerName">
-                        <input type="text" name="name" placeholder="Name" required class="form-control" value="Name" id="nameUser" maxlength="5"> 
-
-                    <div class="containerLimit">
-                        <div>
-                            <h2> Vous avez dépassé la limite de caractères (5 max)</h2>
-                            <p> Cliquer sur le bouton "+" pour en ajouter</p>
+                        <input type="text" name="name" placeholder="Name" required class="form-control"  id="nameUser" maxlength="1" autocomplete="off"> 
+                        <div class="containerLimit">
+                            <div>
+                                <div id="closeLimit"><img src="images/cancel.png" alt=""></div>
+                                <h2> Vous avez atteint la limite de caractères (<span id="cptLength"> </span> max)</h2>
+                                <p> Cliquer sur le bouton "+" pour en ajouter</p>
+                                <div id="annoyingButtonHitBox"> 
+                                    <button type="button" id="annoyingButton"> + </button> 
+                                </div>                                
+                            </div>                            
                         </div>
-                        
-                    </div>
-
 
                         <div id="checkName"> Verify  </div>
                         <div id="errorName"></div>
@@ -33,7 +35,7 @@
                         
                     </div>
                     
-                    <input type="text" name="stat" placeholder="mainStat" required class="form-control" > 
+                    <input type="text" name="stat" placeholder="mainStat" required class="form-control" value="Main Stat"> 
                     <input type="text" name="age" placeholder="age" required class="form-control" > 
                     <input type="text" name="orientation" placeholder="orient" required class="form-control" > 
                     <input type="text" name="picture" placeholder="pic" required class="form-control" > 

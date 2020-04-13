@@ -129,18 +129,6 @@ $(document).ready(function () {
     var result = arrRev.join('');
     $('#userNameValidation').text(result);
   });
-  $("#nameUser").on("keyup", function () {
-    var maxLength = $(this).attr("maxlength");
-
-    if (maxLength == $(this).val().length) {
-      // alert("You can't write more than " + maxLength +" characters")
-      //Faire apparaitre une popup où on propose à l'utilisateur de monter la limite de caractères. Le bouton + se déplace aléatoirement après chaque clic
-      //Mettre un gros bouton vert "Annuler" et un petit gris "Confirmer" pour changer ou non la valeur et fermer le popup
-      $('.containerLimit').addClass("open");
-      $('.containerLimit').css("opacity", "1");
-      $('.containerLimit div').css("opacity", "1");
-    }
-  });
   $("#checkName").click(function () {
     $('#errorName').text("This name is already taken, please generate a new one");
   });
