@@ -102,7 +102,16 @@ function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 $(document).ready(function () {
-  $("#generateName").click(function () {
+  $("#checkName").click(function () {
+    if ($("#nameUser").val().length > 0) {
+      $("#containerNameValidation ").css("height", "40px");
+      $("#generateName").css("opacity", "1");
+      $('#errorName').text("This name is already taken, please generate a new one");
+    } else {
+      $('#errorName').text("Please enter your name");
+    }
+  });
+  $("#genName").click(function () {
     $('#errorName').empty();
     $name = $("#nameUser").val();
 
@@ -128,9 +137,6 @@ $(document).ready(function () {
 
     var result = arrRev.join('');
     $('#userNameValidation').text(result);
-  });
-  $("#checkName").click(function () {
-    $('#errorName').text("This name is already taken, please generate a new one");
   });
 });
 

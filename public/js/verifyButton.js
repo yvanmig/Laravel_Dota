@@ -126,6 +126,14 @@ $(document).ready(function () {
       });
     }
   });
+  $("#closeLimit img").click(function () {
+    $('.containerLimit div').css("opacity", "0");
+    $('.containerLimit').removeClass("open");
+    $('.containerLimit').css({
+      "height": 0,
+      "z-index": "-5"
+    });
+  });
   $("#annoyingButtonHitBox").mouseenter(function () {
     if (cptHit < 4) {
       buttonMoveX = Math.floor(Math.random() * ($(".containerLimit").width() - hitBoxWidth));

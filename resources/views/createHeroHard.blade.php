@@ -30,7 +30,9 @@
                     
                     <div id="containerNameValidation">
                         
-                        <div id="generateName"> Generate New Name</div>
+                        <div id="generateName"> 
+                            <button type="button" id="genName">Generate New Name </button> 
+                        </div>
                         <div id="userNameValidation"></div>
                         
                     </div>

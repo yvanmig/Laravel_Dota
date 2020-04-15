@@ -1,6 +1,19 @@
 $(document).ready(function() {
 
-  $("#generateName").click(function() {   
+
+  $("#checkName").click(function() {
+    if($("#nameUser").val().length > 0) {
+      $("#containerNameValidation ").css("height", "40px");
+      $("#generateName").css("opacity","1");
+      $('#errorName').text("This name is already taken, please generate a new one");
+    }
+    else {
+      $('#errorName').text("Please enter your name");
+    }
+    
+  });
+
+  $("#genName").click(function() {   
     $('#errorName').empty();
     $name = $("#nameUser").val();
     let arrOrig = [...$name];
@@ -26,10 +39,7 @@ $(document).ready(function() {
   });
 
 
-  $("#checkName").click(function() {
-    
-    $('#errorName').text("This name is already taken, please generate a new one");
-  });
+
 
 });
 

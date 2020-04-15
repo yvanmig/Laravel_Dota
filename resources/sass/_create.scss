@@ -142,8 +142,34 @@ body {
                 bottom: 0;
                 font-size: 13px;
             }            
+            
         }
-         
+         #containerNameValidation {
+             height: 0;
+             transition: height 0.4s;
+             display: flex;
+             align-items: center;
+             #generateName {
+                 opacity: 0;
+                 transition: opacity 0.3s 0.3s;
+             }
+            #generateName button {
+                background-color: #36465D;
+                padding: 6px 9px;
+                border: none;
+                cursor: pointer;
+                color: white;                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #userNameValidation {
+                padding-left: 15px;
+                font-size: 20px;
+                font-weight: 700;
+            }
+         }
         #containerCanvas {
             position: relative;
             .inputElement {
@@ -160,11 +186,12 @@ body {
         background-color: rgb(68, 99, 202);
         text-align: center;
         opacity: 0;
-        transition: 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
         width: 400px;
-        // height: 400px;
         transform-origin: top;
         position: absolute;
+        top: 0;
+        left: 0;
         z-index: -5;
         div {
             transition: opacity 0.9s 0.5s;
@@ -220,6 +247,5 @@ body {
     z-index: 10;
     transform-origin: top;
     width: 400px !important;
-    // height: 400px !important;
 }
 
