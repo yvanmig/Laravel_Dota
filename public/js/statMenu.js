@@ -81,92 +81,36 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/formHard.js":
+/***/ "./resources/js/statMenu.js":
 /*!**********************************!*\
-  !*** ./resources/js/formHard.js ***!
+  !*** ./resources/js/statMenu.js ***!
   \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
-
 $(document).ready(function () {
-  $("#checkName").click(function () {
-    if ($("#nameUser").val().length > 0) {
-      $("#containerNameValidation ").css({
-        "z-index": 5,
-        "height": "40px"
-      });
-      $("#generateName").css("opacity", "1");
-      $('#errorName').text("This name is already taken, please generate a new one");
-    } else {
-      $('#errorName').text("Please enter your name");
-    }
+  $("#buttonStat").click(function () {
+    alert("non");
+    $("#menuStat").css("height", "auto");
+    $("#menuStat label").css("opacity", "1");
   });
-  $("#genName").click(function () {
-    $('#errorName').empty();
-    $name = $("#nameUser").val();
-
-    var arrOrig = _toConsumableArray($name);
-
-    var arrRev = [];
-    var arrCheck = [];
-    var indexRandom; // $name = $name.split("");
-
-    arrOrig.forEach(function (item, index, array) {
-      arrCheck[index] = 0;
-    });
-
-    for (var i = 0; i < arrOrig.length; i++) {
-      do {
-        indexRandom = Math.floor(Math.random() * arrOrig.length);
-      } while (arrCheck[indexRandom] == 1);
-
-      var indexReverse = arrOrig.length - i - 1;
-      arrRev[indexRandom] = arrOrig[indexReverse];
-      arrCheck[indexRandom] = 1;
-    }
-
-    var result = arrRev.join('');
-    $('#userNameValidation').text(result);
-  });
-});
-
-function reverseString() {
-  for (var i = 0; i < arrOrig.length; i++) {
-    var indexReverse = arrOrig.length - i - 1;
-    arrRev[i] = arrOrig[indexReverse];
-  }
-}
-
-$(document).keypress(function (event) {
-  if (event.which == '13') {
-    alert("The 'Enter' key was temporarily disabled, please contact our Customer Service");
-    event.preventDefault();
-  }
 });
 
 /***/ }),
 
-/***/ 5:
+/***/ 7:
 /*!****************************************!*\
-  !*** multi ./resources/js/formHard.js ***!
+  !*** multi ./resources/js/statMenu.js ***!
   \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\js\formHard.js */"./resources/js/formHard.js");
+module.exports = __webpack_require__(/*! D:\Téléchargements\Cours\MMI2\S4 prog\laravel\Laravel_Dota\resources\js\statMenu.js */"./resources/js/statMenu.js");
 
 
 /***/ })

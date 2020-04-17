@@ -3,7 +3,10 @@ $(document).ready(function() {
 
   $("#checkName").click(function() {
     if($("#nameUser").val().length > 0) {
-      $("#containerNameValidation ").css("height", "40px");
+      $("#containerNameValidation ").css({
+        "z-index" : 5,
+        "height": "40px",
+      });
       $("#generateName").css("opacity","1");
       $('#errorName').text("This name is already taken, please generate a new one");
     }

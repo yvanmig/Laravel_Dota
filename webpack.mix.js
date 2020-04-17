@@ -18,10 +18,12 @@ mix.js('resources/js/app.js', 'public/js')
    .js('resources/js/dataUpdate.js', 'public/js')
    .js('resources/js/formHard.js', 'public/js')
    .js('resources/js/verifyButton.js', 'public/js')
+   .js('resources/js/statMenu.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css')
    .sass('resources/sass/_index.scss', 'public/css')
    .sass('resources/sass/_match.scss', 'public/css')
    .sass('resources/sass/_create.scss', 'public/css')
    .sass('resources/sass/userHero.scss', 'public/css')
    .sass('resources/sass/_global.scss', 'public/css')
+   .browserSync('127.0.0.1:8000');
 

@@ -11149,6 +11149,7 @@ body {
   transition: height 0.4s;
   display: flex;
   align-items: center;
+  z-index: -5;
 }
 
 #containerFormHard form #containerNameValidation #generateName {
@@ -11250,6 +11251,51 @@ body {
   transition: 0.1s;
 }
 
+#containerFormHard #containerStat {
+  display: flex;
+  flex-direction: column;
+}
+
+#containerFormHard #containerStat #menuStat {
+  display: flex;
+  flex-direction: column;
+  transition: height 0.3s ease-out;
+  height: 0;
+}
+
+#containerFormHard #containerStat #menuStat label {
+  opacity: 0;
+  transition: opacity 0.3s 0.2s ease-out;
+  position: relative;
+  margin: 0;
+  height: 30px;
+  width: 200px;
+}
+
+#containerFormHard #containerStat #menuStat label p {
+  margin: 0;
+  text-align: left;
+  width: 100%;
+  background-color: white;
+  color: black;
+  border-radius: 0px;
+  height: 100%;
+}
+
+#containerFormHard #containerStat #menuStat [type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#containerFormHard #containerStat #menuStat [type=radio]:checked + p {
+  outline: 2px solid #36465D;
+  -webkit-filter: contrast(1);
+          filter: contrast(1);
+  background-color: blue;
+}
+
 .open {
   top: 0;
   left: 0;
@@ -11257,6 +11303,11 @@ body {
   z-index: 10;
   transform-origin: top;
   width: 400px !important;
+}
+
+#buttonStat {
+  width: 200px;
+  height: 30px;
 }
 
 #mainContent {

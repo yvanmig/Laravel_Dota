@@ -24,19 +24,36 @@
                         </div>
 
                         <div id="checkName"> Verify  </div>
-                        <div id="errorName"></div>
-                        
+                        <div id="errorName"></div>                        
                     </div>
                     
-                    <div id="containerNameValidation">
-                        
+                    <div id="containerNameValidation">                        
                         <div id="generateName"> 
                             <button type="button" id="genName">Generate New Name </button> 
                         </div>
-                        <div id="userNameValidation"></div>
-                        
+                        <div id="userNameValidation"></div>                        
                     </div>
                     
+                    <div id="containerStat">
+                        <div id="buttonStat"> <p> Choose your stat <p></div>
+
+                        <div id="menuStat">
+                            <label>
+                                <input type="radio" name="picture" value="Agility">
+                                <p>Agility</p>
+                            </label>
+                            <label>
+                                <input type="radio" name="picture" value="Strength">
+                                <p>Strength</p>
+                            </label>
+                            <label>
+                                <input type="radio" name="picture" value="Intelligence">
+                                <p>Intelligence</p>
+                            </label>
+                        </div>
+                        
+                    </div>                    
+
                     <input type="text" name="stat" placeholder="mainStat" required class="form-control" value="Main Stat"> 
                     <input type="text" name="age" placeholder="age" required class="form-control" > 
                     <input type="text" name="orientation" placeholder="orient" required class="form-control" > 
@@ -78,5 +95,6 @@
     </script>
     <script src="{{ asset('js/formHard.js') }}"></script>
     <script src="{{ asset('js/verifyButton.js') }}"></script>
+    <script src="{{ asset('js/statMenu.js') }}"></script>
     
 @endpush
