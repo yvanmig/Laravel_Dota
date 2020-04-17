@@ -17,9 +17,9 @@
                             <div id="range"> Age : {{ $heroes->age }}</div>
                             <div id="orientation"> Looking for : {{ $heroes->orientation }}</div> 
                             
-                            @foreach ($name as $name)
+                            {{-- @foreach ($name as $name)
                             {{ $name }}
-                            @endforeach
+                            @endforeach --}}
                             
                     </div>
                    

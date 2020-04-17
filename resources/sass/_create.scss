@@ -293,17 +293,47 @@ body {
 }
 
 #buttonStat {
-            width: 200px;
-            height: 30px;
-            // display: flex;
-            // justify-content: space-around;
-            // align-items: center;
-            // background-color: white;
-            // color: black;
-            // cursor: pointer;
-            // img {
-            //     height: auto;
-            //     width: 14px;
-            // }
-            
+    width: 200px;
+    height: 30px;
+           
+}
+
+#containerFormChoose {
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Spartan', sans-serif;
+    background-color: rgba($color: rgb(35, 51, 75), $alpha: 0.8);
+    #containerSelect {
+        padding-top: 25px;
+        display: flex;        
+        justify-content: space-around;
+        text-align : center;
+        a {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
         }
+        #left,#right{
+            transform: scale(1);
+            cursor: pointer;
+            width: 40%;
+            display: inline-block;
+            background-color: rgba(42, 67, 104, 0.8);
+            border-radius: 15px;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);    
+            // padding: 15px;        
+        }
+        #left {
+            width : 100%;
+            height: 100%;
+        }
+        #right:hover {
+            transform: scale(1.1);
+        }
+    }
+}

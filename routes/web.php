@@ -33,6 +33,7 @@ Route::post('/cars-insert', 'CarsController@insert')->name('cars-insert');
 // Route::post('/hero-update', 'customHeroController@updateHero')->name('hero-update'); //mettre à jour la ligne du héro grâce au formulaire
 
 Route::any('/hero-custom', 'CustomHeroesController@index')->name('hero-custom');
+Route::any('/form-easy', 'CustomHeroesController@formEasy')->name('form-easy');
 Route::post('/hero-custom-create', 'CustomHeroesController@createHero')->name('hero-custom-create');
 Route::any('/hero-custom-hard', function() {
     return view('createHeroHard');
