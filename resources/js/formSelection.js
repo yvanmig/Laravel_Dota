@@ -1,3 +1,4 @@
+//Faire varier la taille du bloc quand on passe la souris dessus, et la réinitialiser quand on enlève la souris
 $(document).ready(function() {
 var scale = 1;
 

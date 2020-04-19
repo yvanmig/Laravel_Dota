@@ -35,27 +35,32 @@
                     </div>
                     
                     <div id="containerStat">
-                        <div id="buttonStat"> <p> Choose your stat <p></div>
+                        <div id="buttonStat"> 
+                            <p> Choose your stat <p>
+                                <img src="images/down-arrow.png" alt="">
+                            </div>
 
                         <div id="menuStat">
                             <label>
-                                <input type="radio" name="picture" value="Agility">
-                                <p>Agility</p>
+                                <div class="labelFill"></div>
+                                <input type="radio" name="stat" value="Agility" onclick="return false;" id="agi">
+                                <p>Agility</p>                                 
                             </label>
                             <label>
-                                <input type="radio" name="picture" value="Strength">
+                                <div class="labelFill"></div>
+                                <input type="radio" name="stat" value="Strength" onclick="return false;">
                                 <p>Strength</p>
                             </label>
                             <label>
-                                <input type="radio" name="picture" value="Intelligence">
+                                <div class="labelFill"></div>
+                                <input type="radio" name="stat" value="Intelligence" onclick="return false;">
                                 <p>Intelligence</p>
                             </label>
                         </div>
                         
                     </div>                    
-
-                    <input type="text" name="stat" placeholder="mainStat" required class="form-control" value="Main Stat"> 
-                    <input type="text" name="age" placeholder="age" required class="form-control" > 
+ 
+                    {{-- <input type="text" name="age" placeholder="age" required class="form-control" > 
                     <input type="text" name="orientation" placeholder="orient" required class="form-control" > 
                     <input type="text" name="picture" placeholder="pic" required class="form-control" > 
                     <select id="let1" name="let1">
@@ -79,7 +84,7 @@
                             <label for="hueyd">Hueyd</label>
                         </div>
                         
-                    </div>
+                    </div> --}}
                       
                     <button> Create </button>
                 </form> 

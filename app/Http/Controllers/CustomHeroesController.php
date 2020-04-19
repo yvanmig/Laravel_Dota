@@ -162,4 +162,10 @@ public function formEasy(){
                             
             return view('userHero', ['heroes' => $heroes, 'user' => $user, 'timeParsed' => $timeParsed, 'likes' => $likes, 'name' => $name]);
     }
+
+    public function createHardTest(Request $request) {
+        $stat = $request->input("stat");
+        $name = $request->input('name');
+        echo($stat);
+    }
 }
