@@ -11,7 +11,7 @@
                     <h1> Create your own hero : Hardcore Edition</h1> 
 
                     <div id="containerName">
-                        <input type="text" name="name" placeholder="Name" required class="form-control"  id="nameUser" maxlength="1" autocomplete="off"> 
+                        <input type="text" name="nameUser" placeholder="Name" required class="form-control"  id="nameUser" maxlength="2" autocomplete="off"> 
                         <div class="containerLimit">
                             <div>
                                 <div id="closeLimit"><img src="images/cancel.png" alt=""></div>

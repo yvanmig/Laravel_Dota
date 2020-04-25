@@ -165,7 +165,7 @@ public function formEasy(){
 
     public function createHardTest(Request $request) {
         $stat = $request->input("stat");
-        $name = $request->input('name');
-        echo($stat);
+        $name = $request->input('nameUser');
+        echo($name);
     }
 }

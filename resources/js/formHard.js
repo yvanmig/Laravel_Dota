@@ -16,6 +16,7 @@ $(document).ready(function() {
     
   });
 
+  //Prendre la valeur actuelle de l'input du nom et changer de place chaque lettre de manière aléatoire
   $("#genName").click(function() {   
     $('#errorName').empty();
     $name = $("#nameUser").val();
@@ -31,14 +32,15 @@ $(document).ready(function() {
 
     for (let i=0; i<arrOrig.length; i++) {
       do {
-        indexRandom = Math.floor(Math.random()*arrOrig.length);
-      } while (arrCheck[indexRandom] == 1)
-      let indexReverse = (arrOrig.length-i)-1;
-      arrRev[indexRandom] = arrOrig[indexReverse];  
-      arrCheck[indexRandom] = 1;        
+        indexRandom = Math.floor(Math.random()*arrOrig.length); //Créer un indexrandom dépendant de la taille du nom
+      } while (arrCheck[indexRandom] == 1) //S'assurer que la valeur à l'index n'a pas déjà été touchée
+      let indexReverse = (arrOrig.length-i)-1;  //Index allant de la fin du tableau jusqu'au début
+      arrRev[indexRandom] = arrOrig[indexReverse];  //mettre à jour le tableau receveur
+      arrCheck[indexRandom] = 1;          //Actualiser le tableau de booléens pour confirmer que la valeur à cette index a déjà été changée
     }
     let result = arrRev.join('');
-    $('#userNameValidation').text(result);    
+    $('#userNameValidation').text(result);   
+    $('input[name=nameUser]').val(result); 
   });
 
 
