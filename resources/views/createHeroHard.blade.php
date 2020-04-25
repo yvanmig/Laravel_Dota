@@ -32,13 +32,14 @@
                             <button type="button" id="genName">Generate New Name </button> 
                         </div>
                         <div id="userNameValidation"></div>                        
+                        <div id="checkName"> <img src="images/tick.png" alt=""></div>
                     </div>
                     
                     <div id="containerStat">
                         <div id="buttonStat"> 
                             <p> Choose your stat <p>
                                 <img src="images/down-arrow.png" alt="">
-                            </div>
+                        </div>
 
                         <div id="menuStat">
                             <label>
@@ -56,10 +57,15 @@
                                 <input type="radio" name="stat" value="Intelligence" onclick="return false;">
                                 <p>Intelligence</p>
                             </label>
-                        </div>
-                        
+                        </div>                        
                     </div>                    
  
+                    <div id="hardSelect">
+                        
+                    </div>
+                    
+
+
                     {{-- <input type="text" name="age" placeholder="age" required class="form-control" > 
                     <input type="text" name="orientation" placeholder="orient" required class="form-control" > 
                     <input type="text" name="picture" placeholder="pic" required class="form-control" > 

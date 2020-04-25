@@ -10,7 +10,7 @@ $(document).ready(function() {
 
     let wrapW = $(".wrap").width();
     
-    $("label").mouseenter(function() {
+    $("#menuStat label").mouseenter(function() {
         if (checkWinner == false) {
             let leftR = Math.floor(Math.random()*wrapW-200);
             $(this).css("left", leftR);
@@ -19,7 +19,7 @@ $(document).ready(function() {
         }
     });    
           
-    $("label").mouseleave(function() {
+    $("#menuStat label").mouseleave(function() {
         let child = $(this).find(".labelFill");
         //Si on a laissé la souris assez longtemps sur la div pour la remplir complètement
         if(child.css("width") == "200px" ){

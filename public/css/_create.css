@@ -199,6 +199,12 @@ body {
   font-weight: 700;
 }
 
+#containerFormHard form #containerNameValidation #checkName img {
+  opacity: 0;
+  padding-left: 15px;
+  transition: opacity 0.3s ease-out;
+}
+
 #containerFormHard form #containerCanvas {
   position: relative;
 }
@@ -211,6 +217,53 @@ body {
 #containerFormHard form #containerCanvas canvas {
   margin: 30px;
   background-color: #455cdf;
+}
+
+#containerFormHard #hardSelect {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  text-align: center;
+  /* IMAGE STYLES */
+  /* CHECKED STYLES */
+}
+
+#containerFormHard #hardSelect label {
+  position: relative;
+  margin: 0;
+}
+
+#containerFormHard #hardSelect [type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#containerFormHard #hardSelect p {
+  margin: 0;
+  vertical-align: middle;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s ease-out;
+  cursor: crosshair;
+}
+
+#containerFormHard #hardSelect [type=radio] {
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+#containerFormHard #hardSelect label:hover {
+  transform: scale(1.3);
+}
+
+#containerFormHard #hardSelect [type=radio]:checked + p {
+  outline: 2px solid #36465D;
+  background-color: #36465D;
 }
 
 #containerFormHard .containerLimit {

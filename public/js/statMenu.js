@@ -101,14 +101,14 @@ $(document).ready(function () {
     $("#menuStat label").toggleClass("openLabel");
   });
   var wrapW = $(".wrap").width();
-  $("label").mouseenter(function () {
+  $("#menuStat label").mouseenter(function () {
     if (checkWinner == false) {
       var leftR = Math.floor(Math.random() * wrapW - 200);
       $(this).css("left", leftR);
       $(this).find(".labelFill").css("width", "100%");
     } else {}
   });
-  $("label").mouseleave(function () {
+  $("#menuStat label").mouseleave(function () {
     var child = $(this).find(".labelFill"); //Si on a laissé la souris assez longtemps sur la div pour la remplir complètement
 
     if (child.css("width") == "200px") {

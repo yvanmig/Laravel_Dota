@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+for (let a = 1; a < 201 ; a++) {
+  $("#hardSelect").append($('<label> <input type="radio" name="age" value="' + a + '" checked> <p>' + a + '</p></label>'));
+}
 
   $("#checkName").click(function() {
     if($("#nameUser").val().length > 0) {
@@ -14,6 +17,16 @@ $(document).ready(function() {
       $('#errorName').text("Please enter your name");
     }
     
+  });
+
+  $("#hardSelect p").click(function(){
+    let age = $(this).text();
+    if (age <18) {
+      alert("Do your parents know you're here ?");
+    }
+    if(age > 120) {
+      alert("Yeah... I doubt you're that old");
+    }
   });
 
   //Prendre la valeur actuelle de l'input du nom et changer de place chaque lettre de manière aléatoire
@@ -40,15 +53,10 @@ $(document).ready(function() {
     }
     let result = arrRev.join('');
     $('#userNameValidation').text(result);   
-    $('input[name=nameUser]').val(result); 
+    $('input[name=nameUser]').val(result); //Changer la valeur de l'input
+    $("#checkName img").css("opacity", 1);
   });
-
-
-
-
 });
-
-
 
 function reverseString() {
   for (let i=0; i<arrOrig.length; i++) {  
@@ -56,10 +64,6 @@ function reverseString() {
     arrRev[i] = arrOrig[indexReverse];          
   }
 }
-
-
-
-
 
 $(document).keypress(
     function(event){

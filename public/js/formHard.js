@@ -102,6 +102,10 @@ function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 $(document).ready(function () {
+  for (var a = 1; a < 201; a++) {
+    $("#hardSelect").append($('<label> <input type="radio" name="age" value="' + a + '" checked> <p>' + a + '</p></label>'));
+  }
+
   $("#checkName").click(function () {
     if ($("#nameUser").val().length > 0) {
       $("#containerNameValidation ").css({
@@ -112,6 +116,17 @@ $(document).ready(function () {
       $('#errorName').text("This name is already taken, please generate a new one");
     } else {
       $('#errorName').text("Please enter your name");
+    }
+  });
+  $("#hardSelect p").click(function () {
+    var age = $(this).text();
+
+    if (age < 18) {
+      alert("Do your parents know you're here ?");
+    }
+
+    if (age > 120) {
+      alert("Yeah... I doubt you're that old");
     }
   }); //Prendre la valeur actuelle de l'input du nom et changer de place chaque lettre de manière aléatoire
 
@@ -144,7 +159,9 @@ $(document).ready(function () {
 
     var result = arrRev.join('');
     $('#userNameValidation').text(result);
-    $('input[name=nameUser]').val(result);
+    $('input[name=nameUser]').val(result); //Changer la valeur de l'input
+
+    $("#checkName img").css("opacity", 1);
   });
 });
 
