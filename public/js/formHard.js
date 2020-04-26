@@ -102,10 +102,15 @@ function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 $(document).ready(function () {
-  for (var a = 1; a < 201; a++) {
-    $("#hardSelect").append($('<label> <input type="radio" name="age" value="' + a + '" checked> <p>' + a + '</p></label>'));
+  for (var a = 1; a < 121; a++) {
+    $("#hardSelect").append($('<label> <input type="radio" name="age" value="' + a + '" checked> <p style="transition:opacity ' + a / 70 + 's ease-out, transform 0.1s ' + a / 70 + 's, background-color 0.1s ' + a / 70 + 's ;">' + a + '</p> <div class="fillAge" </div></label>'));
   }
 
+  $("#buttonAge").click(function () {
+    $("#hardSelect").toggleClass("selectOpen");
+    $("#hardSelect label p").toggleClass("selectOpen");
+    $("#hardSelect label p").toggleClass("pOpen");
+  });
   $("#checkName").click(function () {
     if ($("#nameUser").val().length > 0) {
       $("#containerNameValidation ").css({
@@ -125,7 +130,7 @@ $(document).ready(function () {
       alert("Do your parents know you're here ?");
     }
 
-    if (age > 120) {
+    if (age > 115) {
       alert("Yeah... I doubt you're that old");
     }
   }); //Prendre la valeur actuelle de l'input du nom et changer de place chaque lettre de manière aléatoire

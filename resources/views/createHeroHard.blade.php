@@ -60,37 +60,15 @@
                         </div>                        
                     </div>                    
  
-                    <div id="hardSelect">
-                        
+                    <div id="buttonAge"> 
+                        <p> Choose your age <p>
+                            <img src="images/down-arrow.png" alt="">
+                    </div> 
+                    <div id="hardSelect">  
+                                            
                     </div>
                     
 
-
-                    {{-- <input type="text" name="age" placeholder="age" required class="form-control" > 
-                    <input type="text" name="orientation" placeholder="orient" required class="form-control" > 
-                    <input type="text" name="picture" placeholder="pic" required class="form-control" > 
-                    <select id="let1" name="let1">
-                        <option value="A">A</option>
-                        <option value="B">B</option>
-                        <option value="fiat">Fiat</option>
-                        <option value="audi">Audi</option>
-                      </select>
-                      <select id="let2" name="let2">
-                        <option value="a">a</option>
-                        <option value="b">b</option>
-                        <option value="fiat">Fiat</option>
-                        <option value="audi">Audi</option>
-                      </select>
-                    <div id="containerCanvas">
-                        <canvas width="400" height="400"></canvas>
-                        <div class="inputElement">
-                            <input type="radio" id="huey" name="drone" value="huey">
-                            <label for="huey">Huey</label>
-                            <input type="radio" id="hueyd" name="drone" value="hueyd">
-                            <label for="hueyd">Hueyd</label>
-                        </div>
-                        
-                    </div> --}}
                       
                     <button> Create </button>
                 </form> 

@@ -219,6 +219,28 @@ body {
   background-color: #455cdf;
 }
 
+#containerFormHard #buttonAge {
+  cursor: pointer;
+  width: 200px;
+  height: 30px;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  margin-top: 20px;
+}
+
+#containerFormHard #buttonAge p {
+  margin: 0;
+}
+
+#containerFormHard #buttonAge p img {
+  height: auto;
+  width: 18px;
+}
+
 #containerFormHard #hardSelect {
   display: grid;
   grid-template-columns: repeat(13, 1fr);
@@ -226,6 +248,11 @@ body {
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   text-align: center;
+  transition: all 0.5s ease-out;
+  z-index: -10;
+  opacity: 0;
+  height: 0;
+  padding-top: 15px;
   /* IMAGE STYLES */
   /* CHECKED STYLES */
 }
@@ -233,6 +260,7 @@ body {
 #containerFormHard #hardSelect label {
   position: relative;
   margin: 0;
+  transition: transform 0.1s ease-out, opacity 0.3s ease-out;
 }
 
 #containerFormHard #hardSelect [type=radio] {
@@ -248,8 +276,9 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  transition: all 0.2s ease-out;
   cursor: crosshair;
+  opacity: 0;
+  font-size: 10px;
 }
 
 #containerFormHard #hardSelect [type=radio] {
@@ -475,5 +504,15 @@ body {
 
 #containerFormChoose #containerSelect #right:hover {
   transform: scale(1.1);
+}
+
+.selectOpen {
+  z-index: 5 !important;
+  opacity: 1 !important;
+  height: auto !important;
+}
+
+.pOpen {
+  transform: scale(1.4);
 }
 
