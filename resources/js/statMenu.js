@@ -25,8 +25,7 @@ $(document).ready(function() {
         if(child.css("width") == "200px" ){
             child.css({
                 "background-color" : "blue"
-            });
-            child.text("Selected");           
+            });           
             checkWinner = true;            
             $(this).find("input").prop("checked", true);
         } else {

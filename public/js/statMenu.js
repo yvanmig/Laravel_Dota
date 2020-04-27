@@ -115,7 +115,6 @@ $(document).ready(function () {
       child.css({
         "background-color": "blue"
       });
-      child.text("Selected");
       checkWinner = true;
       $(this).find("input").prop("checked", true);
     } else {

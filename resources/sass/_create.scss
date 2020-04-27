@@ -213,12 +213,12 @@ body {
         display: grid;
         grid-template-columns: repeat(13, 1fr);
         grid-template-rows: repeat(10, 1fr);
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
+        grid-column-gap: 10px;
+        grid-row-gap: 8px;
         text-align: center;      
         transition: all 0.5s ease-out;
         z-index: -10;
-        opacity: 0; 
+        opacity: 1; 
         height: 0;
         padding-top: 15px;
     label {
@@ -454,11 +454,11 @@ body {
 }
 
 .selectOpen {
-    z-index: 5 !important;
-    opacity: 1 !important;
+    z-index: 5 !important;    
     height: auto !important;
 }
 
 .pOpen {
     transform: scale(1.4);
+    opacity: 1 !important;
 }
