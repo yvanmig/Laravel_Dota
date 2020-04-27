@@ -2,7 +2,8 @@
  
 Gimard Yvan
  
-L'appli JS utilisant l'API OpenDota. Elle permet d'aller chercher des infos sur tous les personnages du jeu vidéo en ligne Dota 2.
+Un site développé avec le framework Laravel.
+C'est un faux tinder utilisant l'API OpenDota, pour simuler des matchs avec les personnages du jeu vidéo Dota 2.
+On peut aussi se créer un compte et personnaliser son propre personnage, en utilisant l'un des deux formulaires disponibles : un en mode facile, et l'autre en mode difficile.
 
-Le site se met à jour de manière asynchrone (avec du AJAX), pour aller chercher un personnage aléatoire.
-On peut aussi créer son propre profil de personnage fictif.
+
