@@ -104,30 +104,27 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 $(document).ready(function () {
   var numbArray = [];
   var open = 0;
+  var cptImg = 0;
+  var boolImg = false;
+  var checkTime;
+  var myImg;
 
   for (var a = 1; a < 121; a++) {
     numbArray[a] = a;
-  } // numbArray = shuffle(numbArray);
-  // $.each( numbArray, function (index, value) {
-  //   if (value == undefined) {
-  //     value = 19;
-  //   }    
-  //   $("#hardSelect").append($('<label> <input type="radio" name="age" value="' + value + '" checked> <p style="transition:opacity ' + (value/20) + 's ease-in-out, transform 0.1s ' + (value/30) + 's;">' + value + '</p> <div class="fillAge" </div></label>'));
-  // });
+  } //Faire apparaître les boutons radio pour choisir l'âge
 
 
   $("#buttonAge").click(function () {
-    console.log(open);
-
     if (open == 0) {
       open = 1;
       numbArray = shuffle(numbArray);
       $.each(numbArray, function (index, value) {
         if (value == undefined) {
+          //L'une des valeurs est toujours undefined, raison inconnue
           value = 19;
         }
 
-        $("#hardSelect").append($('<label> <input type="radio" name="age" value="' + value + '" checked> <p style="transition:opacity ' + value / 20 + 's ease-in-out, transform 0.1s ' + value / 30 + 's;">' + value + '</p> <div class="fillAge" </div></label>'));
+        $("#hardSelect").append($('<label> <input type="radio" name="age" value="' + value + '" > <p style="transition:opacity ' + value / 20 + 's ease-in-out, transform 0.1s ' + value / 30 + 's;">' + value + '</p> <div class="fillAge" </div></label>'));
       });
     } else if (open == 1) {
       open = 0;
@@ -139,9 +136,7 @@ $(document).ready(function () {
       $("#hardSelect label p").toggleClass("selectOpen");
       $("#hardSelect label p").toggleClass("pOpen");
     }, 1);
-  });
-
-  if (open == 1) {}
+  }); //Informer l'utilisateur que son nom est déjà pris.
 
   $("#checkName").click(function () {
     if ($("#nameUser").val().length > 0) {
@@ -154,15 +149,16 @@ $(document).ready(function () {
     } else {
       $('#errorName').text("Please enter your name");
     }
-  });
-  $("#hardSelect p").click(function () {
+  }); //Vérifier l'âge sélectionné
+
+  $("#hardSelect").on("click", "p", function () {
     var age = $(this).text();
 
     if (age < 18) {
       alert("Do your parents know you're here ?");
     }
 
-    if (age > 115) {
+    if (age > 100) {
       alert("Yeah... I doubt you're that old");
     }
   }); //Prendre la valeur actuelle de l'input du nom et changer de place chaque lettre de manière aléatoire
@@ -175,8 +171,7 @@ $(document).ready(function () {
 
     var arrRev = [];
     var arrCheck = [];
-    var indexRandom; // $name = $name.split("");
-
+    var indexRandom;
     arrOrig.forEach(function (item, index, array) {
       arrCheck[index] = 0;
     });
@@ -199,6 +194,48 @@ $(document).ready(function () {
     $('input[name=nameUser]').val(result); //Changer la valeur de l'input
 
     $("#checkName img").css("opacity", 1);
+  }); //Aggrandir l'image non filtrée, pour signifier qu'on est train de sélectionner l'image
+
+  $("#containerPhotosHard label").click(function (e) {
+    e.preventDefault();
+    var imageFill = $(this).find(".pictureFill img");
+    cptImg += 10;
+
+    if (cptImg >= 80) {
+      cptImg = 100;
+    }
+
+    imageFill.css("width", cptImg + "%");
+  }); //Lancer la fonction qui fait rétrécir l'image au fil du temps, tant qu'on hover
+
+  $("#containerPhotosHard label").mouseenter(function (e) {
+    e.preventDefault();
+    myImg = $(this).find(".pictureFill img");
+    console.log(myImg.css("width"));
+    boolImg = true;
+    setWidth();
+  }); //Diminuer la taille de l'image dans le temps
+
+  function setWidth() {
+    cptImg -= 10;
+
+    if (cptImg <= 0) {
+      cptImg = 0;
+    }
+
+    myImg.css("width", cptImg + "%");
+    checkTime = setTimeout(setWidth, 800);
+  } //Arrêter le timeout qui réduit la taille
+
+
+  function stopWidth() {
+    clearTimeout(checkTime);
+  }
+
+  $("#containerPhotosHard label").mouseleave(function () {
+    cptImg = 0;
+    $(".pictureFill img").css("width", cptImg + "%");
+    stopWidth();
   });
 });
 

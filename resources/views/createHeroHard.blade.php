@@ -65,9 +65,18 @@
                             <img src="images/down-arrow.png" alt="">
                     </div> 
                     <div id="hardSelect">  
-                                            
+                           <input type="radio" name="age" id="placeAge" required>                 
                     </div>
                     
+                    Your profile picture : 
+                    <div id="containerPhotosHard">
+                        @foreach ($urlImg as $urlImg)                        
+                            <label>
+                                <div class="pictureFill"> <input type="radio" name="picture" value= {{ $urlImg }} checked><img src={{ $urlImg }}></div>                            
+                            <img src={{ $urlImg }} class="placeImg">
+                            </label>
+                        @endforeach
+                    </div>
 
                       
                     <button> Create </button>

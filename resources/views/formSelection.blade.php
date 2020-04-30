@@ -18,7 +18,7 @@
                 </div>
             </div>
                 <div id="right">
-                    <a href= {{ route('hero-custom-hard') }}>
+                    <a href= {{ route('form-hard') }}>
                     <div class="wraps">
                         <h2> Hard Mode </h2>
                         <p> Experience the true adventure of creating your own hero</p>
