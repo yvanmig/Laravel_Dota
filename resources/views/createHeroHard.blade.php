@@ -23,7 +23,7 @@
                             </div>                            
                         </div>
 
-                        <div id="checkName"> Verify  </div>
+                        <div id="checkName"> <input type="radio" name="verify" id="verifyRadio" required> Verify  </div>
                         <div id="errorName"></div>                        
                     </div>
                     
@@ -68,7 +68,16 @@
                            <input type="radio" name="age" id="placeAge" required>                 
                     </div>
                     
-                    Your profile picture : 
+                    <label for="orientation"> Choose what kind of partner you're looking for :</label>
+                    <select name="orientation" id="orientationContainer">
+                        <option value="Humanoid" class="orient"> <p>Humanoid </p></option>
+                        <option value="Animal" class="orient"> <p>Animal<p></option>
+                        <option value="Insect" class="orient"> Insect</option>
+                        <option value="Vegetal" class="orient"> Vegetal</option>
+                        <option value="Feeder" class="orient"> Feeder</option>
+                    </select>
+
+                    <p> Your profile picture : <span id="instruction"> </span> </p>
                     <div id="containerPhotosHard">
                         @foreach ($urlImg as $urlImg)                        
                             <label>

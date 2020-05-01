@@ -166,40 +166,41 @@ public function formHard() {
     }
 
     public function createHard(Request $request) {
-        $name = $request->input('name');
+        // $name = $request->input('name');
         // $name = Str::of('dqz dd')->explode(' ');
         // $name = explode('', $name);
-        $name = str_split($name);
+        // $name = str_split($name);
         // echo $name;
         $hero = new Hero; 
-            $hero->idUser= Auth::id(); //renseigner l'id de l'utilisateur
-            $hero->name= $request->input('name');
-            $hero->mainStat= $request->input('stat');
-            $hero->age= $request->input('age');
-            $hero->orientation= $request->input('orientation');
-            $hero->picture= $request->input('picture');
-            $hero->save(); //Enregistrer le nouveau héro
+        $hero->idUser= Auth::id(); //renseigner l'id de l'utilisateur
+        $hero->name= $request->input('nameUser');
+        $hero->mainStat= $request->input('stat');
+        $hero->age= $request->input('age');
+        $hero->orientation= $request->input('orientation');
+        $hero->picture= $request->input('picture');
+        $hero->save(); //Enregistrer le nouveau héro
 
-            $heroes = DB::table('hero')
-            ->where('idUser', Auth::id())
-            ->first();
-            $user = DB::table('users')
-                    ->where('id', Auth::id())
-                    ->first();
+        $heroes = DB::table('hero')
+        ->where('idUser', Auth::id())
+        ->first();
+        $user = DB::table('users')
+                ->where('id', Auth::id())
+                ->first();
         $likes = DB::table('users_data')
                     ->where('id_user', Auth::id())
                     ->first();
-            //Parser la date de création pour change son format d'affichage
-            $timeParsed = Carbon::parse($user->created_at)->isoFormat('LLLL');
+        //Parser la date de création pour change son format d'affichage
+        $timeParsed = Carbon::parse($user->created_at)->isoFormat('LLLL');
                             
-            return view('userHero', ['heroes' => $heroes, 'user' => $user, 'timeParsed' => $timeParsed, 'likes' => $likes, 'name' => $name]);
+            return view('userHero', ['heroes' => $heroes, 'user' => $user, 'timeParsed' => $timeParsed, 'likes' => $likes]);
     }
 
     public function createHardTest(Request $request) {
         $stat = $request->input("stat");
         $name = $request->input('nameUser');
         $age = $request->input('age');
+        $orientation = $request->input('orientation');
         $picture = $request->input('picture');
-        echo($picture);
+        echo($orientation);
     }
 }

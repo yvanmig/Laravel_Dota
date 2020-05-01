@@ -11135,6 +11135,12 @@ body {
   background-color: #36465D;
   padding: 6px 9px;
   cursor: pointer;
+  position: relative;
+}
+
+#containerFormHard form #containerName #checkName input {
+  position: absolute;
+  opacity: 0;
 }
 
 #containerFormHard form #containerName #errorName {
@@ -11269,6 +11275,11 @@ body {
 #containerFormHard #hardSelect [type=radio]:checked + p {
   outline: 2px solid #36465D;
   background-color: #36465D;
+}
+
+#containerFormHard #orientationContainer .orient:nth-child(2n+2) {
+  background-color: black;
+  color: white;
 }
 
 #containerFormHard .containerLimit {

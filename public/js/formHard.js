@@ -105,7 +105,7 @@ $(document).ready(function () {
   var numbArray = [];
   var open = 0;
   var cptImg = 0;
-  var boolImg = false;
+  var imageChecked = false;
   var checkTime;
   var myImg;
 
@@ -126,16 +126,12 @@ $(document).ready(function () {
 
         $("#hardSelect").append($('<label> <input type="radio" name="age" value="' + value + '" > <p style="transition:opacity ' + value / 20 + 's ease-in-out, transform 0.1s ' + value / 30 + 's;">' + value + '</p> <div class="fillAge" </div></label>'));
       });
-    } else if (open == 1) {
-      open = 0;
-      $("#hardSelect").empty();
-    }
-
-    setTimeout(function () {
-      $("#hardSelect").toggleClass("selectOpen");
-      $("#hardSelect label p").toggleClass("selectOpen");
-      $("#hardSelect label p").toggleClass("pOpen");
-    }, 1);
+      setTimeout(function () {
+        $("#hardSelect").addClass("selectOpen");
+        $("#hardSelect label p").addClass("selectOpen");
+        $("#hardSelect label p").addClass("pOpen");
+      }, 1);
+    } else if (open == 1) {}
   }); //Informer l'utilisateur que son nom est déjà pris.
 
   $("#checkName").click(function () {
@@ -164,6 +160,7 @@ $(document).ready(function () {
   }); //Prendre la valeur actuelle de l'input du nom et changer de place chaque lettre de manière aléatoire
 
   $("#genName").click(function () {
+    $("#checkName").find("input").prop("checked", true);
     $('#errorName').empty();
     $name = $("#nameUser").val();
 
@@ -199,22 +196,30 @@ $(document).ready(function () {
   $("#containerPhotosHard label").click(function (e) {
     e.preventDefault();
     var imageFill = $(this).find(".pictureFill img");
-    cptImg += 10;
 
-    if (cptImg >= 80) {
-      cptImg = 100;
-      stopWidth();
+    if (!imageChecked) {
+      $("#instruction").text("Click fast !");
+      cptImg += 10;
+
+      if (cptImg >= 80) {
+        $("#instruction").text("You won !");
+        $(this).find("input").prop("checked", true);
+        imageChecked = true;
+        cptImg = 100;
+        stopWidth();
+      }
+
+      imageFill.css("width", cptImg + "%");
     }
-
-    imageFill.css("width", cptImg + "%");
   }); //Lancer la fonction qui fait rétrécir l'image au fil du temps, tant qu'on hover
 
   $("#containerPhotosHard label").mouseenter(function (e) {
     e.preventDefault();
-    myImg = $(this).find(".pictureFill img");
-    console.log(myImg.css("width"));
-    boolImg = true;
-    setWidth();
+
+    if (!imageChecked) {
+      myImg = $(this).find(".pictureFill img");
+      setWidth();
+    }
   }); //Diminuer la taille de l'image dans le temps
 
   function setWidth() {
@@ -234,11 +239,11 @@ $(document).ready(function () {
   }
 
   $("#containerPhotosHard label").mouseleave(function () {
-    cptImg = 0;
-    $(".pictureFill img").css("width", cptImg + "%");
-    stopWidth();
-
-    if (!boolImg) {}
+    if (!imageChecked) {
+      cptImg = 0;
+      $(".pictureFill img").css("width", cptImg + "%");
+      stopWidth();
+    }
   });
 });
 
