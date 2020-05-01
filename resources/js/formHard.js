@@ -91,6 +91,7 @@ var myImg;
       cptImg += 10;
       if (cptImg >= 80) {
         cptImg = 100;
+        stopWidth();
       }
       imageFill.css("width",cptImg + "%");
   });
@@ -123,6 +124,9 @@ function stopWidth() {
       cptImg = 0;
      $(".pictureFill img").css("width",cptImg + "%");
      stopWidth();
+     if (!boolImg) {
+
+     }
   });
 });
 

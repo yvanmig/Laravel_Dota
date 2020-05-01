@@ -203,6 +203,7 @@ $(document).ready(function () {
 
     if (cptImg >= 80) {
       cptImg = 100;
+      stopWidth();
     }
 
     imageFill.css("width", cptImg + "%");
@@ -236,6 +237,8 @@ $(document).ready(function () {
     cptImg = 0;
     $(".pictureFill img").css("width", cptImg + "%");
     stopWidth();
+
+    if (!boolImg) {}
   });
 });
 
